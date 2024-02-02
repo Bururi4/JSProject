@@ -1,0 +1,129 @@
+@media screen and (max-width: 1229px) {
+    .main-info {
+        padding-left: 0 !important;
+    }
+
+    .container-fluid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 10px;
+    }
+
+    .main-info-action .navbar .btn {
+        margin-right: 10px;
+    }
+
+    .main-info-action-dates {
+        margin-left: 10px;
+    }
+
+    .main-info-diagrams {
+        flex-direction: column !important;
+        margin-top: 60px;
+        margin-left: 0 !important;
+    }
+
+    .wrapper-diagram-gain, .wrapper-diagram-cost {
+        display: flex !important;
+        justify-content: center;
+        align-items: center !important;
+    }
+
+    .border-divider {
+        height: 0;
+        width: 100%;
+        margin-bottom: 16px;
+    }
+}
+
+/* 768 - 1023 */
+@media screen and (max-width: 1023px) {
+    .main-info {
+        margin-left: 20px !important;
+    }
+
+    .main-info-title {
+        font-size: 28px !important;
+    }
+
+    .main-info-action .navbar .btn {
+        font-size: 14px;
+        width: unset;
+        height: unset;
+    }
+
+    .main-info-action-dates > * {
+        font-size: 14px !important;
+    }
+
+    .main-info-diagrams {
+        margin-top: 30px;
+    }
+
+    .diagram-title {
+        font-size: 20px !important;
+    }
+
+    .diagram-colors {
+        justify-content: center !important;
+        column-gap: 8px;
+    }
+
+    .pie-diagram {
+        max-height: 360px;
+        max-width: 360px;
+    }
+
+    .wrapper-diagram-gain, .wrapper-diagram-cost {
+        max-width: max-content !important;
+    }
+}
+
+/* 425 - 767 */
+@media screen and (max-width: 767px) {
+    .sidebar {
+        padding: 12px 0 !important;
+    }
+
+    .logo-link {
+        padding: 12px 0 !important;
+        justify-content: center !important;
+    }
+
+    .main-sidebar {
+        padding: 0 5px 15px 5px !important;
+    }
+
+    .nav-item {
+
+    }
+
+    #category-button {
+        justify-content: unset !important;
+    }
+
+    #category-arrow {
+        margin-left: 15px !important;
+    }
+
+    .sidebar {
+        display: none !important;
+    }
+
+    .main-info {
+        margin-left: 5px !important;
+    }
+}
+
+/* 375 - 424 */
+@media screen and (max-width: 424px) {
+    /*.main-info {*/
+    /*    padding: 0 15px !important;*/
+    /*    margin-left: 0 !important;*/
+    /*}*/
+}
+
+/* 320 - 374 */
+@media screen and (max-width: 374px) {
+
+}

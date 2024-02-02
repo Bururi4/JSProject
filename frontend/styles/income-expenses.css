@@ -1,0 +1,210 @@
+@font-face {
+    font-family: Roboto;
+    src: url("../static/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: RobotoMedium;
+    src: url("../static/fonts/Roboto-Medium.ttf");
+}
+
+@font-face {
+    font-family: RobotoBold;
+    src: url("../static/fonts/Roboto-Bold.ttf");
+}
+
+body,
+html {
+    height: 100%;
+    font-family: Roboto, sans-serif;
+}
+
+.main {
+    height: 100%;
+}
+
+.sidebar {
+    max-width: 219px;
+    background: white !important;
+    font-size: 14px;
+}
+
+.logo-link {
+
+}
+
+.logo {
+    width: 98px;
+    height: 40px;
+}
+
+.nav-item {
+    width: 180px;
+}
+
+.nav-link {
+    height: 40px;
+}
+
+.nav-link.collapsed {
+
+}
+
+.menu-link.active span {
+    color: white;
+}
+
+.menu-link.active svg path {
+    fill: white;
+}
+
+.btn-toggle {
+    font-size: 14px;
+    width: 180px !important;
+    height: 40px;
+    border-radius: 0;
+    color: #052C65;
+}
+
+.btn-toggle::after {
+    content: '';
+}
+
+.btn-toggle.active {
+    border-radius: 0;
+}
+
+.btn-toggle.collapsed {
+    border-radius: var(--bs-nav-pills-border-radius);
+}
+
+.btn-toggle.active.collapsed .category-arrow {
+    transform: rotate(0deg);
+}
+
+.category-arrow {
+    transition: 0.4s;
+}
+
+svg path {
+    fill: #052C65;
+}
+
+.btn-toggle.active .category-arrow {
+    transform: rotate(90deg);
+}
+
+.btn-toggle.active span, .btn-toggle.active .category-arrow path {
+    color: white;
+    fill: white;
+}
+
+.category-item {
+    padding: 8px 0 8px 12px;
+    font-size: 14px;
+}
+
+.balance {
+    font-family: RobotoMedium, sans-serif;
+    color: #052C65;
+}
+
+.nav-item span {
+    color: #052C65;
+}
+
+.main-info-title {
+    font-family: RobotoMedium, sans-serif;
+    color: #052C65;
+}
+
+.main-info-action .navbar .btn {
+    margin-right: 20px;
+    font-family: RobotoMedium, sans-serif;
+    width: 100px;
+    height: 37px;
+}
+
+.main-info-action-dates {
+    font-family: RobotoMedium, sans-serif;
+}
+
+.main-info-action-dates span {
+    color: black;
+}
+
+.action-button {
+    font-size: 14px;
+}
+
+.table {
+    width: 1101px;
+}
+
+.thead {
+    letter-spacing: 1.3px;
+}
+
+.thead th {
+    font-family: RobotoBold, sans-serif;
+    color: #052C65;
+}
+
+.thead th, .tbody th, .tbody td {
+    padding: 14px 10px 10px
+}
+
+.thead tr th:first-child {
+    width: 120px;
+}
+
+.thead tr th:nth-child(2) {
+    width: 120px;
+}
+
+.thead tr th:nth-child(3) {
+    width: 120px;
+}
+
+.thead tr th:nth-child(4) {
+    width: 145px;
+}
+
+.thead tr th:nth-child(5) {
+    width: 145px;
+}
+
+.thead tr th:nth-child(6) {
+    width: 210px;
+}
+
+.thead tr th:nth-child(7) {
+    width: 85px;
+}
+
+.modal {
+    background: #00000073;
+}
+
+.modal-content {
+    padding: 34px 0 40px 0;
+    max-width: 530px;
+    max-height: 184px;
+    top: calc(50% - 92px);
+    left: calc(50% - 265px);
+}
+
+.modal-body p {
+    font-family: RobotoMedium, sans-serif;
+    color: #290661;
+}
+
+.button-delete {
+    font-family: RobotoMedium, sans-serif;
+    font-size: 14px;
+}
+
+
+
+
+
