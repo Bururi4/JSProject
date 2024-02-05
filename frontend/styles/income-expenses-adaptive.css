@@ -1,7 +1,28 @@
 @media screen and (max-width: 1229px) {
+    .sidebar {
+        max-width: 195px;
+    }
+
+    .main-sidebar {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .balance {
+        margin-left: 10px !important;
+    }
+
     .main-info {
         padding-left: 0 !important;
         margin-left: 10px !important;
+    }
+
+    .main-info-title {
+        text-align: center;
+    }
+
+    .main-info-actions {
+        text-align: center;
     }
 
     .container-fluid {
@@ -16,28 +37,36 @@
     }
 
     .main-info-action .navbar .btn {
-        margin-right: 10px;
-        width: unset;
+        justify-self: center;
+        width: 200px;
         height: unset;
+        margin-right: 0;
+    }
+
+    .main-info-action .navbar .btn:first-child, .main-info-action .navbar .btn:nth-child(4) {
+        justify-self: end;
+    }
+
+    .main-info-action .navbar .btn:nth-child(3), .main-info-action .navbar .btn:nth-child(6) {
+        justify-self: start;
     }
 
     .main-info-action-dates {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        margin-right: 75px;
     }
 
-    .main-info-diagrams {
-        flex-direction: column !important;
-        margin-top: 60px;
-        margin-left: 0 !important;
+    .table {
+        max-width: 810px;
     }
 }
 
 /* 768 - 1023 */
 @media screen and (max-width: 1023px) {
     .main-info {
-        margin-left: 20px !important;
+        margin-left: 10px !important;
     }
 
     .main-info-title {
@@ -46,14 +75,31 @@
 
     .main-info-action .navbar .btn {
         font-size: 14px;
+        max-width: 150px;
     }
 
     .main-info-action-dates > * {
         font-size: 14px !important;
     }
 
+    .main-info-action-dates {
+        margin-right: 45px;
+    }
+
     .btn-link {
         padding: 8px !important;
+    }
+
+    .main-info-table {
+        margin-right: 10px;
+    }
+
+    .table {
+        max-width: 552px;
+    }
+
+    th, td {
+        font-size: 12px;
     }
 }
 
@@ -61,6 +107,7 @@
 @media screen and (max-width: 767px) {
     .main {
         flex-direction: column !important;
+        height: max-content;
     }
 
     .sidebar {
@@ -68,7 +115,7 @@
         border: 0 !important;
         align-items: center;
         max-width: 100%;
-        height: 340px!important;
+        height: 340px !important;
     }
 
     .logo-link {
@@ -91,16 +138,6 @@
         justify-content: center;
     }
 
-    .main-info {
-        margin-left: 5px !important;
-        margin-top: 0 !important;
-    }
-
-    .main-info-title {
-        text-align: center;
-        margin-bottom: 15px !important;
-    }
-
     .balance {
         align-self: center;
         margin: 0 0 20px 0 !important;
@@ -120,12 +157,65 @@
         font-size: 14px !important;
     }
 
+    .main-info {
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .main-info-title {
+        font-size: 24px !important;
+        text-align: center;
+        margin-bottom: 15px !important;
+    }
+
+    .action-button {
+        font-size: 12px !important;
+    }
+
+    .main-info-action .navbar .btn {
+        max-width: 115px;
+    }
+
+    .btn-outline-secondary {
+        font-size: 12px !important;
+    }
+
+    .main-info-action-dates > * {
+        font-size: 12px !important;
+    }
+
     .main-info-action-dates {
-        margin-right: 5px;
+        margin-right: 25px;
     }
 
     .btn-link {
         padding: 5px !important;
+    }
+
+    .main-info-table {
+        margin-right: 0;
+        margin-left: 5px;
+    }
+
+    .table {
+        max-width: 415px;
+    }
+
+    .thead th, .tbody th, .tbody td {
+        padding: 0;
+        vertical-align: middle;
+    }
+
+    th, td {
+        font-size: 10px;
+    }
+
+    .btn-delete {
+        padding: 0 2px 6px 0 !important;
+    }
+
+    .btn-edit {
+        padding: 0 0 6px 2px !important;
     }
 }
 
@@ -176,10 +266,6 @@
         font-size: 12px;
         width: 95px;
         justify-self: center;
-    }
-
-    .main-info-action-dates > * {
-        font-size: 12px !important;
     }
 }
 
