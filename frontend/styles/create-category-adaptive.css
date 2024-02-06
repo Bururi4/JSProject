@@ -2,14 +2,6 @@
     .main-info-title {
         font-size: 36px !important;
     }
-
-    .card {
-        width: 274px !important;
-    }
-
-    .card-title {
-        font-size: 24px;
-    }
 }
 
 @media screen and (max-width: 1229px) {
@@ -26,33 +18,6 @@
 
     .main-info-title {
         font-size: 32px !important;
-    }
-
-    .card {
-        width: 245px !important;
-    }
-
-    .card-title {
-        font-size: 20px;
-    }
-
-    .edit-button {
-        padding: 8px !important;
-    }
-
-    .delete-button {
-        padding: 8px !important;
-    }
-
-    .modal-content {
-        padding: 25px 0;
-        max-width: 430px;
-        top: calc(50% - 65px);
-        left: calc(50% - 215px);
-    }
-
-    .modal-text {
-        font-size: 16px !important;
     }
 }
 
@@ -121,23 +86,24 @@
         margin-bottom: 15px !important;
     }
 
-    .main-info-action {
-        justify-content: center;
+    .main-info-inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-bottom: 20px;
     }
+}
 
-    .modal-content {
-        max-width: 330px;
-        top: calc(50% - 62px);
-        left: calc(50% - 165px);
+@media screen and (max-width: 539px) {
+    .main-info-title {
+        font-size: 28px !important;
     }
+}
 
-    .modal-text {
-        font-size: 14px !important;
-    }
-
-    .button-delete {
-        font-size: 12px
+@media screen and (max-width: 515px) {
+    .main-info-title {
+        max-width: 300px;
+        margin: 0 auto;
     }
 }
 
@@ -177,10 +143,16 @@
 
     .main-info-title {
         font-size: 24px !important;
+        max-width: 285px;
+        margin: 0 auto;
     }
 
-    .modal-content {
-        padding: 15px 0;
+    .main-info-inputs {
+        padding: 0 10px !important;
+    }
+
+    .form-control {
+        font-size: 14px !important;
     }
 }
 
@@ -197,12 +169,5 @@
     .btn-toggle {
         width: 147px !important;
         justify-content: center !important;
-    }
-
-    .modal-content {
-        padding: 20px 0;
-        max-width: 285px;
-        top: calc(50% - 63px);
-        left: calc(50% - 142px);
     }
 }

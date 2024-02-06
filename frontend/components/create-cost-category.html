@@ -5,6 +5,8 @@
     <title>Создать категорию</title>
     <link rel="stylesheet" href="../styles/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/create-category.css">
+    <link rel="stylesheet" href="../styles/create-category-adaptive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -104,15 +106,17 @@
         <div class="main-info-title fs-1 mb-4 pb-3">
             Создание категории расходов
         </div>
-        <div class="input-group flex-nowrap mb-2 border border-light-subtle rounded">
-            <input type="text" class="form-control" placeholder="Название..."
-                   aria-label="title" aria-describedby="title">
-        </div>
-        <div class="main-info-actions mt-3">
-            <a href="#" id="save-changes" class="btn btn-success action-button px-3 py-2 m-0 me-1">Создать</a>
-            <a href="./cost.html" id="reject-delete" class="btn btn-danger action-button px-3 py-2 m-0 ms-1">
-                Отмена
-            </a>
+        <div class="main-info-inputs">
+            <div class="input-group flex-nowrap mb-2 border border-light-subtle rounded">
+                <input type="text" class="form-control" placeholder="Название..."
+                       aria-label="title" aria-describedby="title">
+            </div>
+            <div class="main-info-actions mt-3">
+                <a href="#" id="save-changes" class="btn btn-success action-button px-3 py-2 m-0 me-1">Создать</a>
+                <a href="./cost.html" id="reject-delete" class="btn btn-danger action-button px-3 py-2 m-0 ms-1">
+                    Отмена
+                </a>
+            </div>
         </div>
     </div>
 </div>
