@@ -95,6 +95,7 @@
 @media screen and (max-width: 767px) {
     .main {
         flex-direction: column !important;
+        height: max-content;
     }
 
     .sidebar {

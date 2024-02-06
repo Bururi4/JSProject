@@ -5,6 +5,8 @@
     <title>Создать доход/расход</title>
     <link rel="stylesheet" href="../styles/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/create-income-expenses.css">
+    <link rel="stylesheet" href="../styles/create-income-expenses-adaptive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -104,34 +106,37 @@
         <div class="main-info-title fs-1 mb-4 pb-3">
             Создание дохода/расхода
         </div>
-        <div class="input-group flex-nowrap mb-2 border border-light-subtle rounded">
-            <select class="form-control" required>
-                <option value="" disabled selected>Тип...</option>
-                <option value="income">Доход</option>
-                <option  value="expense">Расход</option>
-            </select>
-        </div>
-        <div class="input-group flex-nowrap mb-2 border border-light-subtle rounded">
-            <select class="form-control" required>
-                <option value="" disabled selected>Категория...</option>
-                <option></option>
-            </select>
-        </div>
-        <div class="input-group flex-nowrap mb-2 border border-light-subtle rounded">
-            <input type="number" class="form-control" placeholder="Сумма, в $...">
-        </div>
-        <div class="input-group flex-nowrap mb-2 border border-light-subtle rounded">
-            <input type="text" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')"
-                   id="date" placeholder="Дата...">
-        </div>
-        <div class="input-group flex-nowrap mb-2 border border-light-subtle rounded">
-            <input type="text" class="form-control" placeholder="Комментарий...">
-        </div>
-        <div class="main-info-actions mt-3">
-            <a href="#" id="save-changes" class="btn btn-success action-button px-3 py-2 m-0 me-1">Создать</a>
-            <a href="./income-expenses.html" id="reject-delete" class="btn btn-danger action-button px-3 py-2 m-0 ms-1">
-                Отмена
-            </a>
+        <div class="main-info-inputs">
+            <div class="input-group flex-nowrap mb-2 border border-light-subtle rounded">
+                <select class="form-control" required>
+                    <option value="" disabled selected>Тип...</option>
+                    <option value="income">Доход</option>
+                    <option value="expense">Расход</option>
+                </select>
+            </div>
+            <div class="input-group flex-nowrap mb-2 border border-light-subtle rounded">
+                <select class="form-control" required>
+                    <option value="" disabled selected>Категория...</option>
+                    <option></option>
+                </select>
+            </div>
+            <div class="input-group flex-nowrap mb-2 border border-light-subtle rounded">
+                <input type="number" class="form-control" placeholder="Сумма, в $...">
+            </div>
+            <div class="input-group flex-nowrap mb-2 border border-light-subtle rounded">
+                <input type="text" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')"
+                       id="date" placeholder="Дата...">
+            </div>
+            <div class="input-group flex-nowrap mb-2 border border-light-subtle rounded">
+                <input type="text" class="form-control" placeholder="Комментарий...">
+            </div>
+            <div class="main-info-actions mt-3">
+                <a href="#" id="save-changes" class="btn btn-success action-button px-3 py-2 m-0 me-1">Создать</a>
+                <a href="./income-expenses.html" id="reject-delete"
+                   class="btn btn-danger action-button px-3 py-2 m-0 ms-1">
+                    Отмена
+                </a>
+            </div>
         </div>
     </div>
 </div>

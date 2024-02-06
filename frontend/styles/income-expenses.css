@@ -194,7 +194,7 @@ svg path {
     left: calc(50% - 265px);
 }
 
-.modal-body p {
+.modal-text {
     font-family: RobotoMedium, sans-serif;
     color: #290661;
 }

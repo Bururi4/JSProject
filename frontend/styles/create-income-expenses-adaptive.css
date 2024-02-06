@@ -2,14 +2,6 @@
     .main-info-title {
         font-size: 36px !important;
     }
-
-    .card {
-        width: 274px !important;
-    }
-
-    .card-title {
-        font-size: 24px;
-    }
 }
 
 @media screen and (max-width: 1229px) {
@@ -26,22 +18,6 @@
 
     .main-info-title {
         font-size: 32px !important;
-    }
-
-    .card {
-        width: 245px !important;
-    }
-
-    .card-title {
-        font-size: 20px;
-    }
-
-    .edit-button {
-        padding: 8px!important;
-    }
-
-    .delete-button {
-        padding: 8px!important;
     }
 }
 
@@ -110,8 +86,10 @@
         margin-bottom: 15px !important;
     }
 
-    .main-info-action {
-        justify-content: center;
+    .main-info-inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-bottom: 20px;
     }
 }
@@ -154,6 +132,13 @@
         font-size: 24px !important;
     }
 
+    .main-info-inputs {
+        padding: 0 10px !important;
+    }
+
+    .form-control {
+        font-size: 14px !important;
+    }
 }
 
 /* 320 - 374 */

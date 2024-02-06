@@ -101,6 +101,17 @@
     th, td {
         font-size: 12px;
     }
+
+    .modal-content {
+        padding: 25px 0;
+        max-width: 430px;
+        top: calc(50% - 65px);
+        left: calc(50% - 215px);
+    }
+
+    .modal-text {
+        font-size: 16px !important;
+    }
 }
 
 /* 425 - 767 */
@@ -217,6 +228,20 @@
     .btn-edit {
         padding: 0 0 6px 2px !important;
     }
+
+    .modal-content {
+        max-width: 330px;
+        top: calc(50% - 62px);
+        left: calc(50% - 165px);
+    }
+
+    .modal-text {
+        font-size: 14px !important;
+    }
+
+    .button-delete {
+        font-size: 12px
+    }
 }
 
 /* 375 - 424 */
@@ -293,6 +318,14 @@
         width: 13px;
         height: 13px;
     }
+
+    .modal-content {
+        padding: 15px 0;
+    }
+
+    .modal-text {
+
+    }
 }
 
 /* 320 - 374 */
@@ -320,5 +353,12 @@
 
     th, td {
         font-size: 8px;
+    }
+
+    .modal-content {
+        padding: 15px 0;
+        max-width: 260px;
+        top: calc(50% - 63px);
+        left: calc(50% - 130px);
     }
 }
