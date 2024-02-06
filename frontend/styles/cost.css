@@ -118,6 +118,11 @@ svg path {
     color: #052C65;
 }
 
+.main-info-action {
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
 .card-body {
     padding: 20px;
 }

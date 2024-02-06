@@ -254,7 +254,11 @@
     }
 
     .main-info-title {
-        font-size: 24px !important;
+        font-size: 20px !important;
+    }
+
+    .action-button {
+        font-size: 10px !important;
     }
 
     .container-fluid {
@@ -263,9 +267,31 @@
 
     .main-info-action .navbar .btn {
         margin-right: 0;
-        font-size: 12px;
-        width: 95px;
+        font-size: 10px !important;
+        width: 90px;
         justify-self: center;
+    }
+
+    .main-info-action-dates > * {
+        font-size: 10px !important;
+    }
+
+    .main-info-action-dates {
+        margin-right: 30px;
+    }
+
+    .table {
+        max-width: 365px;
+    }
+
+    .btn-delete img {
+        width: 12px;
+        height: 13px;
+    }
+
+    .btn-edit img {
+        width: 13px;
+        height: 13px;
     }
 }
 
@@ -282,5 +308,17 @@
     .btn-toggle {
         width: 147px !important;
         justify-content: center !important;
+    }
+
+    .main-info-table {
+        padding-top: 0 !important;
+    }
+
+    .table {
+        max-width: 310px;
+    }
+
+    th, td {
+        font-size: 8px;
     }
 }

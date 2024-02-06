@@ -1,31 +1,9 @@
-@media screen and (max-width: 1440px) {
-    .main-info-title {
-        font-size: 36px !important;
-    }
-
-    .card {
-        width: 274px !important;
-    }
-
-    .card-title {
-        font-size: 24px;
-    }
-}
-
 @media screen and (max-width: 1229px) {
     .main-info {
         padding-left: 0 !important;
+        margin-left: 10px !important;
     }
 
-    .main-info-action {
-        column-gap: 20px;
-        row-gap: 20px;
-    }
-
-    .card {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
 }
 
 /* 768 - 1023 */
