@@ -1,27 +1,15 @@
-@media screen and (max-width: 1440px) {
-    .main-info-title {
-        font-size: 36px !important;
-    }
-}
-
 @media screen and (max-width: 1229px) {
     .main-info {
         padding-left: 0 !important;
     }
 }
 
-/* 768 - 1023 */
 @media screen and (max-width: 1023px) {
-    .main-info {
-        margin-left: 20px !important;
-    }
-
     .main-info-title {
         font-size: 32px !important;
     }
 }
 
-/* 425 - 767 */
 @media screen and (max-width: 767px) {
     .main {
         flex-direction: column !important;
@@ -74,40 +62,8 @@
     .dropdown-item {
         font-size: 14px !important;
     }
-
-    .main-info {
-        margin-left: 0 !important;
-        margin-top: 0 !important;
-        width: 100% !important;
-    }
-
-    .main-info-title {
-        text-align: center;
-        margin-bottom: 15px !important;
-    }
-
-    .main-info-inputs {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-    }
 }
 
-@media screen and (max-width: 539px) {
-    .main-info-title {
-        font-size: 28px !important;
-    }
-}
-
-@media screen and (max-width: 515px) {
-    .main-info-title {
-        max-width: 300px;
-        margin: 0 auto;
-    }
-}
-
-/* 375 - 424 */
 @media screen and (max-width: 424px) {
     .nav-item {
         width: 155px;
@@ -143,20 +99,9 @@
 
     .main-info-title {
         font-size: 24px !important;
-        max-width: 285px;
-        margin: 0 auto;
-    }
-
-    .main-info-inputs {
-        padding: 0 10px !important;
-    }
-
-    .form-control {
-        font-size: 14px !important;
     }
 }
 
-/* 320 - 374 */
 @media screen and (max-width: 374px) {
     .nav-item {
         width: 147px;

@@ -1,0 +1,101 @@
+@media screen and (max-width: 1440px) {
+    .main-info-title {
+        font-size: 36px !important;
+    }
+
+    .card {
+        width: 274px !important;
+    }
+
+    .card-title {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 1229px) {
+
+}
+
+/* 768 - 1023 */
+@media screen and (max-width: 1023px) {
+    .main-info {
+        margin-left: 20px !important;
+    }
+
+    .card {
+        width: 245px !important;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .edit-button {
+        padding: 8px !important;
+    }
+
+    .delete-button {
+        padding: 8px !important;
+    }
+
+    .modal-content {
+        padding: 25px 0;
+        max-width: 430px;
+        top: calc(50% - 65px);
+        left: calc(50% - 215px);
+    }
+
+    .modal-text {
+        font-size: 16px !important;
+    }
+}
+
+/* 425 - 767 */
+@media screen and (max-width: 767px) {
+    .main-info {
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+        width: 100% !important;
+    }
+
+    .main-info-title {
+        text-align: center;
+        margin-bottom: 15px !important;
+    }
+
+    .main-info-action {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .modal-content {
+        max-width: 330px;
+        top: calc(50% - 62px);
+        left: calc(50% - 165px);
+    }
+
+    .modal-text {
+        font-size: 14px !important;
+    }
+
+    .button-delete {
+        font-size: 12px
+    }
+}
+
+/* 375 - 424 */
+@media screen and (max-width: 424px) {
+    .modal-content {
+        padding: 15px 0;
+    }
+}
+
+/* 320 - 374 */
+@media screen and (max-width: 374px) {
+    .modal-content {
+        padding: 20px 0;
+        max-width: 285px;
+        top: calc(50% - 63px);
+        left: calc(50% - 142px);
+    }
+}
