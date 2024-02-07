@@ -61,8 +61,8 @@
     width: 85px;
 }
 
-.modal {
-    background: #00000073;
+.modal-dialog {
+    height: 90%;
 }
 
 .modal-content {

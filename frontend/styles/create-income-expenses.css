@@ -19,9 +19,11 @@ input[type="number"]::-webkit-outer-spin-button {
 select:required:invalid {
     color: rgba(33, 37, 41, 0.75);
 }
+
 option[value=""][disabled] {
     display: none;
 }
+
 option {
     color: black;
 }

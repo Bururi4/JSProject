@@ -17,8 +17,8 @@
     font-size: 14px;
 }
 
-.modal {
-    background: #00000073;
+.modal-dialog {
+    height: 90%;
 }
 
 .modal-content {
@@ -26,7 +26,7 @@
     max-width: 530px;
     max-height: 184px;
     top: calc(50% - 92px);
-    left: calc(50% - 265px);
+    left: calc(50% - 250px);
 }
 
 .modal-text {

@@ -3,9 +3,6 @@ const buttonCategory = document.querySelector(".btn-toggle");
 const categoryDropdown = document.getElementById("dashboard-collapse");
 const dropdownList = document.getElementById("dropdown-list");
 const dropdown = document.getElementById("dropdown");
-const cardDeleteButton = document.querySelectorAll(".delete-button");
-const popup = document.getElementById("modal");
-const rejectButtonDelete = document.getElementById("reject-delete");
 
 menuItems.forEach(item => {
     item.addEventListener("click", function () {
@@ -42,13 +39,4 @@ document.addEventListener("click", (event) => {
             dropdownList.classList.remove("show");
         }
     }
-});
-
-cardDeleteButton.forEach(button => {
-    button.addEventListener("click", function () {
-        popup.style.display = "block";
-        rejectButtonDelete.onclick = () => {
-            popup.style.display = "none";
-        };
-    });
 });
