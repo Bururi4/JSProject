@@ -2,26 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Главная</title>
+    <title>Редактирование категории</title>
     <link rel="stylesheet" href="../styles/bootstrap.min.css">
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/edit-category.css">
     <link rel="stylesheet" href="../styles/common-styles.css">
-    <link rel="stylesheet" href="../styles/adaptive_styles/main-adaptive.css">
+    <link rel="stylesheet" href="../styles/adaptive_styles/edit-category-adaptive.css">
     <link rel="stylesheet" href="../styles/adaptive_styles/common-adaptive-styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+
 <div class="main d-flex">
-    <div class="sidebar d-flex flex-column bg-body-tertiary border-end border-2 py-3">
-        <a href="../index.html"
+    <div class="sidebar d-flex flex-column flex-shrink-0 bg-body-tertiary border-end border-2 py-3 h-100">
+        <a href="signin.html"
            class="logo-link d-flex align-items-center justify-content-start text-decoration-none px-5 py-4 border-bottom border-2">
             <img src="../static/images/logo.png" class="logo" alt="logo">
         </a>
         <div class="main-sidebar px-3 py-3 border-bottom border-2 d-flex flex-column justify-content-between h-100">
             <ul class="nav nav-pills flex-column mb-auto mt-5 mx-auto" id="sidebar">
                 <li class="nav-item menu-item">
-                    <a href="./main.html" class="nav-link d-flex align-items-center menu-link active"
-                       aria-current="page">
+                    <a href="main.html" class="nav-link d-flex align-items-center menu-link" aria-current="page">
                         <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                   d="M1.5 12.3964V5.89641H2.5V12.3964C2.5 12.6726 2.72386 12.8964 3 12.8964H12C12.2761 12.8964 12.5 12.6726 12.5 12.3964V5.89641H13.5V12.3964C13.5 13.2248 12.8284 13.8964 12 13.8964H3C2.17157 13.8964 1.5 13.2248 1.5 12.3964Z"
@@ -37,7 +37,7 @@
                     </a>
                 </li>
                 <li class="nav-item menu-item">
-                    <a href="./income-expenses.html" class="nav-link p-2 ps-3 menu-link">
+                    <a href="income-expenses.html" class="nav-link p-2 ps-3 menu-link">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                   d="M11 15C13.2091 15 15 13.2091 15 11C15 8.79086 13.2091 7 11 7C8.79086 7 7 8.79086 7 11C7 13.2091 8.79086 15 11 15ZM16 11C16 13.7614 13.7614 16 11 16C8.23858 16 6 13.7614 6 11C6 8.23858 8.23858 6 11 6C13.7614 6 16 8.23858 16 11Z"
@@ -49,11 +49,11 @@
                             <path d="M9.9983 5.08325C9.99943 5.05564 10 5.02789 10 5C10 3.89543 9.10457 3 8 3C6.89543 3 6 3.89543 6 5C6 5.6845 6.34387 6.28869 6.86829 6.64924C7.71486 5.84504 8.79591 5.28533 9.9983 5.08325Z"
                                   fill=""/>
                         </svg>
-                        <span class="ms-1 span">Доходы & Расходы</span>
+                        <span class="ms-1">Доходы & Расходы</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn btn-toggle d-inline-flex align-items-center border-0 py-2 d-flex justify-content-between rounded-top"
+                    <a class="nav-link btn btn-toggle d-inline-flex align-items-center border-0 py-2 d-flex justify-content-between rounded-top active"
                        data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false"
                        id="category-button">
                         <span>Категории</span>
@@ -69,16 +69,16 @@
                                   fill=""/>
                         </svg>
                     </a>
-                    <div class="collapse" id="dashboard-collapse">
+                    <div class="collapse show" id="dashboard-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal">
                             <li class="category-item border border-primary">
-                                <a href="./gain.html"
+                                <a href="cost.html"
                                    class="category-item-link link-primary d-inline-flex text-decoration-none rounded text-primary">
                                     Доходы
                                 </a>
                             </li>
                             <li class="category-item border border-top-0 rounded-bottom-1 border-primary">
-                                <a href="./cost.html"
+                                <a href="gain.html"
                                    class="category-item-link link-primary d-inline-flex text-decoration-none rounded text-primary">
                                     Расходы
                                 </a>
@@ -104,80 +104,25 @@
             </ul>
         </div>
     </div>
-    <div class="main-info mt-5 pt-5 ms-5 ps-3">
-        <div class="main-info-title fs-1 mb-5">
-            Главная
+    <div class="main-info mt-5 pt-5 ms-5 ps-3 w-75">
+        <div class="main-info-title fs-1 mb-4 pb-3">
+            Редактирование категории доходов
         </div>
-        <div class="main-info-action d-flex align-items-center">
-            <nav class="navbar p-0">
-                <form class="container-fluid justify-content-start px-0">
-                    <button class="btn btn-outline-secondary active" type="button">Сегодня</button>
-                    <button class="btn btn-outline-secondary" type="button">Неделя</button>
-                    <button class="btn btn-outline-secondary" type="button">Месяц</button>
-                    <button class="btn btn-outline-secondary" type="button">Год</button>
-                    <button class="btn btn-outline-secondary" type="button">Все</button>
-                    <button class="btn btn-outline-secondary" type="button">Интервал</button>
-                </form>
-            </nav>
-            <div class="main-info-action-dates">
-                <span>с</span>
-                <button type="button" class="btn btn-link text-secondary">Дата</button>
-                <span>по</span>
-                <button type="button" class="btn btn-link text-secondary">Дата</button>
+        <div class="main-info-inputs">
+            <div class="input-group flex-nowrap mb-2 border border-light-subtle rounded">
+                <input type="text" class="form-control" placeholder="Название..."
+                       aria-label="title" aria-describedby="title">
             </div>
-        </div>
-        <div class="main-info-diagrams d-flex ms-4">
-            <div class="wrapper-diagram-gain mb-3">
-                <div class="diagram-gain text-center d-flex flex-column mb-3">
-                    <div class="diagram-title fs-3 mb-3">
-                        Доходы
-                    </div>
-                    <div class="diagram-colors d-flex align-items-center justify-content-between mb-4">
-                        <div class="rectangle bg-danger"></div>
-                        <span>Red</span>
-                        <div class="rectangle orange"></div>
-                        <span>Orange</span>
-                        <div class="rectangle yellow"></div>
-                        <span>Yellow</span>
-                        <div class="rectangle green"></div>
-                        <span>Green</span>
-                        <div class="rectangle bg-primary"></div>
-                        <span>Blue</span>
-                    </div>
-                    <div class="chart-wrapper">
-                        <canvas id="first-pie" class="pie-diagram"></canvas>
-                    </div>
-                </div>
-            </div>
-            <div class="border-divider border d-flex align-self-end"></div>
-            <div class="wrapper-diagram-cost mb-3 d-flex flex-column align-items-end">
-                <div class="diagram-cost text-center d-flex flex-column mb-3">
-                    <div class="diagram-title fs-3 mb-3">
-                        Расходы
-                    </div>
-                    <div class="diagram-colors d-flex align-items-center justify-content-between mb-4">
-                        <div class="rectangle bg-danger"></div>
-                        <span>Red</span>
-                        <div class="rectangle orange"></div>
-                        <span>Orange</span>
-                        <div class="rectangle yellow"></div>
-                        <span>Yellow</span>
-                        <div class="rectangle green"></div>
-                        <span>Green</span>
-                        <div class="rectangle bg-primary"></div>
-                        <span>Blue</span>
-                    </div>
-                    <div class="chart-wrapper">
-                        <canvas id="second-pie" class="pie-diagram"></canvas>
-                    </div>
-                </div>
+            <div class="main-info-actions mt-3">
+                <a href="#" id="create-card" class="btn btn-success action-button px-3 py-2 m-0 me-1">Сохранить</a>
+                <a href="gain.html" id="reject-delete" class="btn btn-danger action-button px-3 py-2 m-0 ms-1">
+                    Отмена
+                </a>
             </div>
         </div>
     </div>
 </div>
 <script src="../src/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script src="../src/common.js"></script>
-<script src="../src/main.js" type="module"></script>
 </body>
 </html>

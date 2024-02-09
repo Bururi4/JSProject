@@ -2,25 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Расходы</title>
+    <title>Доходы и расходы</title>
     <link rel="stylesheet" href="../styles/bootstrap.min.css">
-    <link rel="stylesheet" href="../styles/cost.css">
+    <link rel="stylesheet" href="../styles/income-expenses.css">
     <link rel="stylesheet" href="../styles/common-styles.css">
-    <link rel="stylesheet" href="../styles/adaptive_styles/cost-adaptive.css">
+    <link rel="stylesheet" href="../styles/adaptive_styles/income-expenses-adaptive.css">
     <link rel="stylesheet" href="../styles/adaptive_styles/common-adaptive-styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+
 <div class="main d-flex">
     <div class="sidebar d-flex flex-column flex-shrink-0 bg-body-tertiary border-end border-2 py-3 h-100">
-        <a href="../index.html"
+        <a href="signin.html"
            class="logo-link d-flex align-items-center justify-content-start text-decoration-none px-5 py-4 border-bottom border-2">
             <img src="../static/images/logo.png" class="logo" alt="logo">
         </a>
         <div class="main-sidebar px-3 py-3 border-bottom border-2 d-flex flex-column justify-content-between h-100">
             <ul class="nav nav-pills flex-column mb-auto mt-5 mx-auto" id="sidebar">
                 <li class="nav-item menu-item">
-                    <a href="./main.html" class="nav-link d-flex align-items-center menu-link" aria-current="page">
+                    <a href="main.html" class="nav-link d-flex align-items-center menu-link"
+                       aria-current="page">
                         <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                   d="M1.5 12.3964V5.89641H2.5V12.3964C2.5 12.6726 2.72386 12.8964 3 12.8964H12C12.2761 12.8964 12.5 12.6726 12.5 12.3964V5.89641H13.5V12.3964C13.5 13.2248 12.8284 13.8964 12 13.8964H3C2.17157 13.8964 1.5 13.2248 1.5 12.3964Z"
@@ -36,7 +38,7 @@
                     </a>
                 </li>
                 <li class="nav-item menu-item">
-                    <a href="./income-expenses.html" class="nav-link p-2 ps-3 menu-link">
+                    <a href="./income-expenses.html" class="nav-link p-2 ps-3 menu-link active">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                   d="M11 15C13.2091 15 15 13.2091 15 11C15 8.79086 13.2091 7 11 7C8.79086 7 7 8.79086 7 11C7 13.2091 8.79086 15 11 15ZM16 11C16 13.7614 13.7614 16 11 16C8.23858 16 6 13.7614 6 11C6 8.23858 8.23858 6 11 6C13.7614 6 16 8.23858 16 11Z"
@@ -52,7 +54,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn btn-toggle d-inline-flex align-items-center border-0 py-2 d-flex justify-content-between rounded-top active"
+                    <a class="nav-link btn btn-toggle d-inline-flex align-items-center border-0 py-2 d-flex justify-content-between rounded-top"
                        data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false"
                        id="category-button">
                         <span>Категории</span>
@@ -68,16 +70,16 @@
                                   fill=""/>
                         </svg>
                     </a>
-                    <div class="collapse show" id="dashboard-collapse">
+                    <div class="collapse" id="dashboard-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal">
                             <li class="category-item border border-primary">
-                                <a href="./gain.html"
+                                <a href="gain.html"
                                    class="category-item-link link-primary d-inline-flex text-decoration-none rounded text-primary">
                                     Доходы
                                 </a>
                             </li>
                             <li class="category-item border border-top-0 rounded-bottom-1 border-primary">
-                                <a href="./cost.html"
+                                <a href="cost.html"
                                    class="category-item-link link-primary d-inline-flex text-decoration-none rounded text-primary">
                                     Расходы
                                 </a>
@@ -103,122 +105,99 @@
             </ul>
         </div>
     </div>
-    <div class="main-info mt-5 pt-5 ms-5 ps-3 w-75">
-        <div class="main-info-title fs-1 mb-4 pb-3">
-            Расходы
+    <div class="main-info mt-5 pt-5 ms-5 ps-3 w-100">
+        <div class="main-info-title fs-1 mb-4">
+            Доходы и расходы
         </div>
-        <div class="main-info-action d-flex align-items-center flex-wrap">
-            <div class="card w-25">
-                <div class="card-body">
-                    <h3 class="card-title">Еда</h3>
-                    <div class="card-buttons d-flex">
-                        <a href="./edit-cost-category.html" class="button edit-button btn btn-primary me-2 px-3 py-2">Редактировать</a>
-                        <a href="#" class="button delete-button btn btn-danger px-3 py-2" data-bs-toggle="modal"
-                           data-bs-target="#modal">Удалить</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card w-25">
-                <div class="card-body">
-                    <h3 class="card-title">Жильё</h3>
-                    <div class="card-buttons d-flex">
-                        <a href="#" class="button edit-button btn btn-primary me-2 px-3 py-2">Редактировать</a>
-                        <a href="#" class="button delete-button btn btn-danger px-3 py-2" data-bs-toggle="modal"
-                           data-bs-target="#modal">Удалить</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card w-25">
-                <div class="card-body">
-                    <h3 class="card-title">Здоровье</h3>
-                    <div class="card-buttons d-flex">
-                        <a href="#" class="button edit-button btn btn-primary me-2 px-3 py-2">Редактировать</a>
-                        <a href="#" class="button delete-button btn btn-danger px-3 py-2" data-bs-toggle="modal"
-                           data-bs-target="#modal">Удалить</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card w-25">
-                <div class="card-body">
-                    <h3 class="card-title">Кафе</h3>
-                    <div class="card-buttons d-flex">
-                        <a href="#" class="button edit-button btn btn-primary me-2 px-3 py-2">Редактировать</a>
-                        <a href="#" class="button delete-button btn btn-danger px-3 py-2" data-bs-toggle="modal"
-                           data-bs-target="#modal">Удалить</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card w-25">
-                <div class="card-body">
-                    <h3 class="card-title">Авто</h3>
-                    <div class="card-buttons d-flex">
-                        <a href="#" class="button edit-button btn btn-primary me-2 px-3 py-2">Редактировать</a>
-                        <a href="#" class="button delete-button btn btn-danger px-3 py-2" data-bs-toggle="modal"
-                           data-bs-target="#modal">Удалить</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card w-25">
-                <div class="card-body">
-                    <h3 class="card-title">Одежда</h3>
-                    <div class="card-buttons d-flex">
-                        <a href="#" class="button edit-button btn btn-primary me-2 px-3 py-2">Редактировать</a>
-                        <a href="#" class="button delete-button btn btn-danger px-3 py-2" data-bs-toggle="modal"
-                           data-bs-target="#modal">Удалить</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card w-25">
-                <div class="card-body">
-                    <h3 class="card-title">Развлечения</h3>
-                    <div class="card-buttons d-flex">
-                        <a href="#" class="button edit-button btn btn-primary me-2 px-3 py-2">Редактировать</a>
-                        <a href="#" class="button delete-button btn btn-danger px-3 py-2" data-bs-toggle="modal"
-                           data-bs-target="#modal">Удалить</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card w-25">
-                <div class="card-body">
-                    <h3 class="card-title">Счета</h3>
-                    <div class="card-buttons d-flex">
-                        <a href="#" class="button edit-button btn btn-primary me-2 px-3 py-2">Редактировать</a>
-                        <a href="#" class="button delete-button btn btn-danger px-3 py-2" data-bs-toggle="modal"
-                           data-bs-target="#modal">Удалить</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card w-25">
-                <div class="card-body">
-                    <h3 class="card-title">Спорт</h3>
-                    <div class="card-buttons d-flex">
-                        <a href="#" class="button edit-button btn btn-primary me-2 px-3 py-2">Редактировать</a>
-                        <a href="#" class="button delete-button btn btn-danger px-3 py-2" data-bs-toggle="modal"
-                           data-bs-target="#modal">Удалить</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card w-25">
-                <a href="./create-cost-category.html" class="card-body py-5 d-flex justify-content-center m-1">
-                    <img src="../static/images/plus.svg" alt="add-card">
-                </a>
+        <div class="main-info-actions pt-3 pb-3">
+            <a href="create-income-expenses.html" id="create-income"
+               class="btn btn-success action-button px-3 py-2 m-0 me-1">Создать доход</a>
+            <a href="create-income-expenses.html" id="create-expense"
+               class="btn btn-danger action-button px-3 py-2 m-0 ms-1">Создать расход</a>
+        </div>
+        <div class="main-info-action d-flex align-items-center mt-4 mb-4">
+            <nav class="navbar p-0">
+                <form class="container-fluid justify-content-start px-0">
+                    <button class="btn btn-outline-secondary active" type="button">Сегодня</button>
+                    <button class="btn btn-outline-secondary" type="button">Неделя</button>
+                    <button class="btn btn-outline-secondary" type="button">Месяц</button>
+                    <button class="btn btn-outline-secondary" type="button">Год</button>
+                    <button class="btn btn-outline-secondary" type="button">Все</button>
+                    <button class="btn btn-outline-secondary" type="button">Интервал</button>
+                </form>
+            </nav>
+            <div class="main-info-action-dates">
+                <span>с</span>
+                <button type="button" class="btn btn-link text-secondary">Дата</button>
+                <span>по</span>
+                <button type="button" class="btn btn-link text-secondary">Дата</button>
             </div>
         </div>
-    </div>
-    <div class="modal" id="modal">
-        <div class="modal-dialog">
-            <div class="modal-content border">
-                <div class="modal-body p-0">
-                    <p class="modal-text fs-5 m-0 text-center mb-3">Вы действительно хотите удалить категорию?</p>
-                </div>
-                <div class="modal-footer border-0 p-0 justify-content-center">
-                    <button type="button" id="confirm-delete" class="btn btn-success button-delete px-3 py-2 m-0 me-1">
-                        Да, удалить
-                    </button>
-                    <button type="button" id="reject-delete" class="btn btn-danger button-delete px-3 py-2 m-0 ms-1"
-                            data-bs-dismiss="modal">
-                        Не удалять
-                    </button>
+        <div class="main-info-table pt-3">
+            <table class="table text-center">
+                <thead class="thead">
+                <tr class="border border-end-0 border-start-0">
+                    <th scope="col">№ операции</th>
+                    <th scope="col">Тип</th>
+                    <th scope="col">Категория</th>
+                    <th scope="col">Сумма</th>
+                    <th scope="col">Дата</th>
+                    <th scope="col">Комментарий</th>
+                    <th scope="col"></th>
+                </tr>
+                </thead>
+                <tbody class="tbody ">
+                <tr class="border border-end-0 border-start-0">
+                    <th scope="row">1</th>
+                    <td class="text-success">доход</td>
+                    <td>зарплата</td>
+                    <td>500$</td>
+                    <td>11.09.2022</td>
+                    <td></td>
+                    <td class="d-flex border-0 p-0 mt-2 justify-content-end">
+                        <button class="btn p-1 border-0 btn-delete" data-bs-toggle="modal" data-bs-target="#modal"><img
+                                src="../static/images/trash.svg" alt="Удалить">
+                        </button>
+                        <button class="btn p-1 border-0 btn-edit"><img src="../static/images/pen.svg"
+                                                                       alt="Редактировать">
+                        </button>
+                    </td>
+                </tr>
+                <tr class="border border-end-0 border-start-0">
+                    <th scope="row">2</th>
+                    <td class="text-danger">расход</td>
+                    <td>жильё</td>
+                    <td>2 500$</td>
+                    <td>12.09.2022</td>
+                    <td></td>
+                    <td class="d-flex border-0 p-0 mt-2 justify-content-end">
+                        <button class="btn p-1 border-0 btn-delete" data-bs-toggle="modal" data-bs-target="#modal"><img
+                                src="../static/images/trash.svg" alt="Удалить">
+                        </button>
+                        <button class="btn p-1 border-0 btn-edit"><img src="../static/images/pen.svg"
+                                                                       alt="Редактировать">
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="modal" id="modal">
+            <div class="modal-dialog">
+                <div class="modal-content border">
+                    <div class="modal-body p-0">
+                        <p class="modal-text fs-5 m-0 text-center mb-3">Вы действительно хотите удалить операцию?</p>
+                    </div>
+                    <div class="modal-footer border-0 p-0 justify-content-center">
+                        <button type="button" id="confirm-delete"
+                                class="btn btn-success button-delete px-3 py-2 m-0 me-1">
+                            Да, удалить
+                        </button>
+                        <button type="button" id="reject-delete" class="btn btn-danger button-delete px-3 py-2 m-0 ms-1"
+                                data-bs-dismiss="modal">
+                            Не удалять
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -226,5 +205,6 @@
 </div>
 <script src="../src/bootstrap.min.js"></script>
 <script src="../src/common.js"></script>
+<script src="../src/components/income-expenses.js"></script>
 </body>
 </html>

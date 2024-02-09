@@ -40,3 +40,13 @@ document.addEventListener("click", (event) => {
         }
     }
 });
+
+function checkUserData() {
+    const url = new URL(location.href);
+    const data = url.searchParams.get('data');
+    const email = url.searchParams.get('email');
+
+    if (!data || !email) {
+        location.href = 'signin.html';
+    }
+}

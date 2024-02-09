@@ -19,42 +19,44 @@
         </div>
         <div class="login-fields d-flex flex-column mb-3">
             <div class="input-group flex-nowrap mb-2 border border-light-subtle rounded">
-                <span class="input-group-text" id="data">
+                <span class="input-group-text">
                     <img src="../static/images/person-icon.png" alt="lock-icon">
                 </span>
-                <input type="text" class="form-control" placeholder="ФИО" aria-label="Data"
+                <input type="text" id="data" class="form-control" placeholder="ФИО" aria-label="Data"
                        aria-describedby="data">
             </div>
             <div class="input-group flex-nowrap mb-2 border border-light-subtle rounded">
-                <span class="input-group-text" id="email">
+                <span class="input-group-text">
                     <img src="../static/images/email-icon.png" alt="email-icon">
                 </span>
-                <input type="text" class="form-control" placeholder="Электронная почта" aria-label="Email"
+                <input type="text" id="email" class="form-control" placeholder="Электронная почта" aria-label="Email"
                        aria-describedby="email">
             </div>
             <div class="input-group flex-nowrap mb-2 border border-light-subtle rounded">
-                <span class="input-group-text" id="password">
+                <span class="input-group-text">
                     <img src="../static/images/lock-icon.png" alt="lock-icon">
                 </span>
-                <input type="text" class="form-control" placeholder="Пароль" aria-label="Password"
+                <input type="text" id="password" class="form-control" placeholder="Пароль" aria-label="Password"
                        aria-describedby="password">
             </div>
             <div class="input-group flex-nowrap mb-2 border border-light-subtle rounded">
-                <span class="input-group-text" id="repeat-password">
+                <span class="input-group-text">
                     <img src="../static/images/lock-icon.png" alt="lock-icon">
                 </span>
-                <input type="text" class="form-control" placeholder="Подтверждение пароля" aria-label="Password-verification"
+                <input type="text" id="repeat-password" class="form-control" placeholder="Подтверждение пароля"
+                       aria-label="Password-verification"
                        aria-describedby="repeat-password">
             </div>
         </div>
     </div>
     <div class="login-actions w-100">
-        <button class="btn btn-primary w-100 mb-2" type="button">Войти</button>
+        <button class="btn btn-primary w-100 mb-2" type="button" id="process" disabled>Войти</button>
         <div class="login-actions-link text-start">
             Уже есть аккаунт?
-            <a href="../index.html" class="login-actions-link-signup mx-2 link-primary">Войдите в систему</a>
+            <a href="./signin.html" class="login-actions-link-signup mx-2 link-primary">Войдите в систему</a>
         </div>
     </div>
 </div>
+<script src="../src/components/signup.js"></script>
 </body>
 </html>
