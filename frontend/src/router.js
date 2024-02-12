@@ -1,3 +1,7 @@
+import {Form} from "./components/form.js";
+import {Auth} from "../../services/auth.js";
+
+
 export class Router {
     constructor() {
         this.routes = [

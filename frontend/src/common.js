@@ -47,6 +47,6 @@ function checkUserData() {
     const email = url.searchParams.get('email');
 
     if (!data || !email) {
-        location.href = 'signin.html';
+        location.href = 'login.html';
     }
 }
