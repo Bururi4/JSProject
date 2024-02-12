@@ -1,10 +1,3 @@
-export class Main {
-    constructor() {
-        checkUserData();
-
-    }
-}
-
 let ctxOne = document.getElementById("first-pie").getContext("2d");
 let ctxTwo = document.getElementById("second-pie").getContext("2d");
 let colorHexFirstDiagram = ["#ffc107", "#fd7e14", "#dc3545", "#1acc7a", "#0d6efd"];
