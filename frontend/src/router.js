@@ -1,5 +1,6 @@
 import {Form} from "./components/form.js";
 import {Auth} from "../services/auth.js";
+import {PieChart} from "./components/main.js";
 
 
 export class Router {
@@ -18,7 +19,7 @@ export class Router {
                 template: 'templates/main.html',
                 styles: 'styles/main.css',
                 load: () => {
-
+                    new PieChart()
                 }
             },
             {
@@ -66,8 +67,63 @@ export class Router {
 
                 }
             },
+            {
+                route: '#/operations-edit',
+                title: 'Редактировать доход/расход',
+                template: 'templates/edit-income-expenses.html',
+                styles: 'styles/create-income-expenses.css',
+                load: () => {
+
+                }
+            },
+            {
+                route: '#/operations-create',
+                title: 'Редактировать доход/расход',
+                template: 'templates/create-income-expenses.html',
+                styles: 'styles/create-income-expenses.css',
+                load: () => {
+
+                }
+            },
+            {
+                route: '#/create-income',
+                title: 'Создание категории доходов',
+                template: 'templates/create-gain-category.html',
+                styles: 'styles/create-category.css',
+                load: () => {
+
+                }
+            },
+            {
+                route: '#/create-expense',
+                title: 'Создание категории расходов',
+                template: 'templates/create-cost-category.html',
+                styles: 'styles/create-category.css',
+                load: () => {
+
+                }
+            },
+            {
+                route: '#/edit-income',
+                title: 'Редактирование категории доходов',
+                template: 'templates/edit-gain-category.html',
+                styles: 'styles/edit-category.css',
+                load: () => {
+
+                }
+            },
+            {
+                route: '#/edit-expense',
+                title: 'Редактирование категории расходов',
+                template: 'templates/edit-cost-category.html',
+                styles: 'styles/edit-category.css',
+                load: () => {
+
+                }
+            },
         ];
     }
+
     async openRoute() {
         const urlRoute = window.location.hash.split('?')[0];
         if (urlRoute === '#/logout') {
