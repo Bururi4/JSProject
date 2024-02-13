@@ -36,5 +36,17 @@ html {
 }
 
 .input-group.error {
-    border-color: red!important;
+    border-color: red !important;
+}
+
+@media screen and (max-width: 424px) {
+    .main {
+        max-width: 350px;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .main {
+        max-width: 300px;
+    }
 }
