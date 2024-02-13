@@ -1,7 +1,7 @@
 import {Form} from "./components/form.js";
 import {Auth} from "../services/auth.js";
 import {PieChart} from "./components/main.js";
-
+import {Sidebar} from "./sidebar.js";
 
 export class Router {
     constructor() {
@@ -153,6 +153,10 @@ export class Router {
             this.titleElement.innerText = newRoute.title;
             this.registrationElement.style.display = 'none';
             this.mainElement.style.display = 'flex';
+
+            if (urlRoute !== '#/login' && urlRoute !== '#/signup') {
+                new Sidebar();
+            }
 
             const userInfo = Auth.getUserInfo();
             const accessToken = localStorage.getItem(Auth.accessTokenKey);
