@@ -7,14 +7,14 @@ export class CustomHttp {
             method: method,
             headers: {
                 'Content-Type': 'application/json',
-                'Accept': 'application/json',
+                'Accept': 'application/json'
             }
         };
 
         let token = localStorage.getItem(Auth.accessTokenKey);
 
         if (token) {
-            params.headers['x-access-token'] = token;
+            params.headers['x-auth-token'] = token;
         }
 
         if (body) {
@@ -29,10 +29,13 @@ export class CustomHttp {
                 const result = await Auth.processUnauthorizedResponse();
 
                 if (result) {
-                    return await this.request(url, method, body);
+                    return this.request(url, method, body);
                 } else {
                     return null;
                 }
+            }
+            if (response.status === 400) {
+                return response.json();
             }
             throw new Error(response.message);
         }

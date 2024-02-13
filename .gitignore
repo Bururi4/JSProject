@@ -1,5 +1,5 @@
-.idea/
-/node_modules/
-/backendp/node_modules/
-/backendp/package-lock.json
-/package-lock.json
+/.idea
+/frontend/node_modules
+/frontend/.idea
+/backend/node_modules
+/backend/.idea

@@ -55,7 +55,7 @@ export class Form {
                     valid: false,
                 },
                 {
-                    name: 'repeatPassword',
+                    name: 'passwordRepeat',
                     id: 'repeat-password',
                     element: null,
                     regex: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
@@ -91,7 +91,7 @@ export class Form {
             this.password = element.value;
         }
 
-        if (field.name === 'repeatPassword') {
+        if (field.name === 'passwordRepeat') {
             if (element.value !== this.password) {
                 element.parentNode.classList.add('error');
                 field.valid = false;
@@ -126,7 +126,7 @@ export class Form {
                         lastName: this.fields.find(item => item.name === 'data').element.value.split(' ')[1],
                         email: email,
                         password: password,
-                        repeatPassword: this.fields.find(item => item.name === 'repeatPassword').element.value
+                        passwordRepeat: this.fields.find(item => item.name === 'passwordRepeat').element.value
                     });
 
                     if (result) {
@@ -147,7 +147,7 @@ export class Form {
                 const result = await CustomHttp.request(config.host + '/login', 'POST', {
                         email: email,
                         password: password,
-                        rememberMeCheckbox: rememberMeCheckbox
+                        rememberMe: rememberMeCheckbox
                     }
                 );
 
@@ -155,15 +155,17 @@ export class Form {
                     if (result.error || !result.tokens.accessToken || !result.tokens.refreshToken
                         || !result.user.name || !result.user.lastName || !result.user.id) {
                         throw new Error(result.message);
+                    } else {
+                        Auth.setTokens(result.tokens.accessToken, result.tokens.refreshToken);
+                        Auth.setUserInfo({
+                            name: result.user.name,
+                            lastName: result.user.lastName,
+                            userId: result.user.id
+                        })
+                        location.href = '#/';
                     }
-
-                    Auth.setTokens(result.tokens.accessToken, result.tokens.refreshToken);
-                    Auth.setUserInfo({
-                        name: result.user.name,
-                        lastName: result.user.lastName,
-                        userId: result.user.id
-                    })
-                    location.href = '#/';
+                } else {
+                    throw new Error(result.message);
                 }
             } catch (error) {
                 return console.log(error);
