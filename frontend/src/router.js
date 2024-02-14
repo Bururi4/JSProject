@@ -1,7 +1,7 @@
 import {Form} from "./components/form.js";
 import {Auth} from "../services/auth.js";
 import {PieChart} from "./components/main.js";
-import {Sidebar} from "./sidebar.js";
+import {Sidebar} from "./components/sidebar.js";
 
 export class Router {
     constructor() {
@@ -11,6 +11,7 @@ export class Router {
         this.stylesElement = document.getElementById('styles');
         this.titleElement = document.getElementById('page-title');
         this.profilefullNameElement = document.getElementById('profile-full-name');
+        this.sidebar = null;
 
         this.routes = [
             {
@@ -155,7 +156,9 @@ export class Router {
             this.mainElement.style.display = 'flex';
 
             if (urlRoute !== '#/login' && urlRoute !== '#/signup') {
-                new Sidebar();
+                if (!this.sidebar) {
+                    this.sidebar = new Sidebar();
+                }
             }
 
             const userInfo = Auth.getUserInfo();
