@@ -2,6 +2,7 @@ import {Form} from "./components/form.js";
 import {Auth} from "../services/auth.js";
 import {PieChart} from "./components/main.js";
 import {Sidebar} from "./components/sidebar.js";
+import {Balance} from "./components/balance.js";
 
 export class Router {
     constructor() {
@@ -166,6 +167,7 @@ export class Router {
 
             if (userInfo && accessToken) {
                 this.profilefullNameElement.innerText = userInfo.name + ' ' + userInfo.lastName;
+                new Balance();
             } else {
                 window.location.href = '#/login';
             }
