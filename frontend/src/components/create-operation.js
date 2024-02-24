@@ -160,19 +160,19 @@ export class CreateOperation {
         const correctDate = date[2] + '-' + date[1] + '-' + date[0];
 
         let selectType;
-        let categoryId;
+        let selectId;
         if (typeSelect.value === 'Доход') {
             selectType = 'income';
             const getCategory = this.getSendCategory(selectType).then((categories) => {
                     return categories.find((category) => {
                         if (category.title === categorySelect.value) {
-                            return category.id
+                            return category.id;
                         }
                     })
                 })
             getCategory.then((answer) => {
                 if (answer) {
-                    categoryId = answer.id;
+                    selectId = answer.id;
                 }
             });
         } else if (typeSelect.value === 'Расход') {
@@ -180,28 +180,26 @@ export class CreateOperation {
             const getCategory = this.getSendCategory(selectType).then((categories) => {
                     return categories.find((category) => {
                         if (category.title === categorySelect.value) {
-                            return category.id
+                            return category.id;
                         }
                     })
                 })
             getCategory.then((answer) => {
                 if (answer) {
-                    categoryId = answer.id;
+                    selectId = answer.id;
                 }
             });
         }
 
         setTimeout(async () => {
-            if (selectType.value && categorySelect.value && sumInput.value
-                && dateInput.value && commentInput.value) {
+            if (selectType && categorySelect.value && sumInput.value && dateInput.value && commentInput.value) {
                 try {
-                    const result = await CustomHttp.request(config.host + '/'
-                        + this.urlRoute.split('/')[1], 'POST', {
+                    const result = await CustomHttp.request(config.host + '/' + this.urlRoute.split('/')[1], 'POST', {
                         type: selectType,
-                        category_id: categoryId,
                         amount: sumInput.value,
                         date: correctDate,
-                        comment: commentInput.value
+                        comment: commentInput.value,
+                        category_id: selectId
                     });
                     if (result) {
                         if (result.error || result.message) {

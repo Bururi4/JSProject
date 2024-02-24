@@ -2,7 +2,7 @@ import {CustomHttp} from "../../services/custom-http.js";
 import config from "../../config/config.js";
 import AirDatepicker from 'air-datepicker';
 import {CreateOperation} from "./create-operation";
-// import {EditOperation} from "./edit-operation";
+import {EditOperation} from "./edit-operation";
 
 export class Operations {
     urlRoute = window.location.hash.split('?')[0];
@@ -148,11 +148,26 @@ export class Operations {
 
         if (this.operationsData.length === 0) {
             const tr = document.createElement('tr');
-            tr.innerText = 'Нет операций по выбранному периоду';
-            tr.style.fontStyle = 'italic';
-            tr.style.display = 'block';
-            tr.style.marginTop = '10px';
-            tr.style.fontSize = '18px';
+            const td1 = document.createElement('td');
+            const td2 = document.createElement('td');
+            const td3 = document.createElement('td');
+            const td4 = document.createElement('td');
+            const td5 = document.createElement('td');
+            const td6 = document.createElement('td');
+            const td7 = document.createElement('td');
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td4);
+            tr.appendChild(td5);
+            tr.appendChild(td6);
+            tr.appendChild(td7);
+            td4.innerText = 'Нет операций по выбранному периоду';
+            td4.style.fontStyle = 'italic';
+            td4.style.display = 'block';
+            td4.style.marginTop = '10px';
+            td4.style.marginBottom = '-1px';
+            td4.style.fontSize = '18px';
             tableBody.appendChild(tr);
         } else {
             this.operationsData.forEach((operation) => {
@@ -239,9 +254,9 @@ export class Operations {
                     editLink.className = 'btn p-1 border-0 btn-delete';
                     editLink.setAttribute('href', 'javascript:void(0)');
                     editLink.insertAdjacentHTML('afterbegin', '<img src="../../images/pen.svg" alt="Редактировать операцию">');
-                    // editLink.onclick = async () => {
-                    //     new editOperation(operation.id);
-                    // }
+                    editLink.onclick = async () => {
+                        new EditOperation(operation.id);
+                    }
                     options.appendChild(editLink);
 
                     const deleteLink = document.createElement('a');
