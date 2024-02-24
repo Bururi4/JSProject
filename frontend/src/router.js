@@ -3,6 +3,7 @@ import {Auth} from "../services/auth.js";
 import {PieChart} from "./components/main.js";
 import {Sidebar} from "./components/sidebar.js";
 import {Balance} from "./components/balance.js";
+import {Operations} from "./components/operations";
 
 export class Router {
     constructor() {
@@ -66,7 +67,7 @@ export class Router {
                 template: 'templates/income-expenses.html',
                 styles: 'styles/income-expenses.css',
                 load: () => {
-
+                    new Operations();
                 }
             },
             {

@@ -1,32 +1,42 @@
-<div class="main-info mt-5 pt-5 ms-5 ps-3">
+<div class="main-info mt-5 pt-5 ms-5 ps-3" id="main-info">
     <div class="main-info-title fs-1 mb-4">
         Доходы и расходы
     </div>
     <div class="main-info-actions pt-3 pb-3">
-        <a href="#/operations-create" id="create-income"
-           class="btn btn-success action-button px-3 py-2 m-0 me-1">Создать доход</a>
-        <a href="#/operations-create" id="create-expense"
-           class="btn btn-danger action-button px-3 py-2 m-0 ms-1">Создать расход</a>
+        <button id="create-income" class="btn btn-success action-button px-3 py-2 m-0 me-1">
+            Создать доход
+        </button>
+        <button id="create-expense" class="btn btn-danger action-button px-3 py-2 m-0 ms-1">
+            Создать расход
+        </button>
     </div>
     <div class="main-info-action d-flex align-items-center mt-4 mb-4">
         <nav class="navbar p-0">
             <form class="container-fluid justify-content-start px-0">
-                <button class="btn btn-outline-secondary active" type="button">Сегодня</button>
-                <button class="btn btn-outline-secondary" type="button">Неделя</button>
-                <button class="btn btn-outline-secondary" type="button">Месяц</button>
-                <button class="btn btn-outline-secondary" type="button">Год</button>
-                <button class="btn btn-outline-secondary" type="button">Все</button>
-                <button class="btn btn-outline-secondary" type="button">Интервал</button>
+                <button class="btn btn-outline-secondary date-filter" type="button" id="todayBtn">Сегодня</button>
+                <button class="btn btn-outline-secondary date-filter" type="button" id="weekBtn">Неделя</button>
+                <button class="btn btn-outline-secondary date-filter" type="button" id="monthBtn">Месяц</button>
+                <button class="btn btn-outline-secondary date-filter" type="button" id="yearBtn">Год</button>
+                <button class="btn btn-outline-secondary date-filter" type="button" id="allBtn">Все</button>
+                <button class="btn btn-outline-secondary date-filter" type="button" id="interval-btn" disabled>
+                    Интервал
+                </button>
             </form>
         </nav>
-        <div class="main-info-action-dates">
+        <div class="main-info-action-dates d-flex align-items-center justify-content-center">
             <span>с</span>
-            <button type="button" class="btn btn-link text-secondary">Дата</button>
+            <div class="d-flex flex-column">
+                <label class="btn btn-link text-secondary text-date" for="date-from" id="date-from-label">Дата</label>
+                <input type="text" id="date-from" class="main-info-action-dates-input">
+            </div>
             <span>по</span>
-            <button type="button" class="btn btn-link text-secondary">Дата</button>
+            <div class="d-flex flex-column">
+                <label class="btn btn-link text-secondary text-date" for="date-to" id="date-to-label">Дата</label>
+                <input type="text" id="date-to" class="main-info-action-dates-input">
+            </div>
         </div>
     </div>
-    <div class="main-info-table pt-3">
+    <div class="table-responsive-xxl pt-3">
         <table class="table text-center">
             <thead class="thead">
             <tr class="border border-end-0 border-start-0">
@@ -39,39 +49,7 @@
                 <th scope="col"></th>
             </tr>
             </thead>
-            <tbody class="tbody ">
-            <tr class="border border-end-0 border-start-0">
-                <th scope="row">1</th>
-                <td class="text-success">доход</td>
-                <td>зарплата</td>
-                <td>500$</td>
-                <td>11.09.2022</td>
-                <td></td>
-                <td class="d-flex border-0 p-0 mt-2 justify-content-end">
-                    <button class="btn p-1 border-0 btn-delete" data-bs-toggle="modal" data-bs-target="#modal">
-                        <img src="../images/trash.svg" alt="Удалить">
-                    </button>
-                    <button class="btn p-1 border-0 btn-edit">
-                        <img src="../images/pen.svg" alt="Редактировать">
-                    </button>
-                </td>
-            </tr>
-            <tr class="border border-end-0 border-start-0">
-                <th scope="row">2</th>
-                <td class="text-danger">расход</td>
-                <td>жильё</td>
-                <td>2 500$</td>
-                <td>12.09.2022</td>
-                <td></td>
-                <td class="d-flex border-0 p-0 mt-2 justify-content-end">
-                    <button class="btn p-1 border-0 btn-delete" data-bs-toggle="modal" data-bs-target="#modal"><img
-                            src="../images/trash.svg" alt="Удалить">
-                    </button>
-                    <button class="btn p-1 border-0 btn-edit"><img src="../images/pen.svg"
-                                                                   alt="Редактировать">
-                    </button>
-                </td>
-            </tr>
+            <tbody class="tbody" id="tbody">
             </tbody>
         </table>
     </div>

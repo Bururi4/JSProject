@@ -4,14 +4,14 @@
     </div>
     <div class="main-info-inputs">
         <div class="input-group flex-nowrap mb-2 border border-light-subtle rounded">
-            <select class="form-control" required>
+            <select class="form-control" required id="type-select">
                 <option value="" disabled selected>Тип...</option>
                 <option value="income">Доход</option>
                 <option value="expense">Расход</option>
             </select>
         </div>
         <div class="input-group flex-nowrap mb-2 border border-light-subtle rounded">
-            <select class="form-control" required>
+            <select class="form-control" required id="category-select">
                 <option value="" disabled selected>Категория...</option>
                 <option></option>
             </select>
@@ -27,11 +27,8 @@
             <input type="text" class="form-control" placeholder="Комментарий...">
         </div>
         <div class="main-info-actions mt-3">
-            <a href="#" id="save-changes" class="btn btn-success action-button px-3 py-2 m-0 me-1">Создать</a>
-            <a href="#/operations" id="reject-delete"
-               class="btn btn-danger action-button px-3 py-2 m-0 ms-1">
-                Отмена
-            </a>
+            <button href="#" id="save-changes" class="btn btn-success action-button px-3 py-2 m-0 me-1">Создать</button>
+            <button href="#/operations" id="reject-delete" class="btn btn-danger action-button px-3 py-2 m-0 ms-1">Отмена</button>
         </div>
     </div>
 </div>

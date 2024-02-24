@@ -5,14 +5,6 @@
     height: 37px;
 }
 
-.main-info-action-dates {
-    font-family: RobotoMedium, sans-serif;
-}
-
-.main-info-action-dates span {
-    color: black;
-}
-
 .action-button {
     font-size: 14px;
 }
@@ -31,34 +23,6 @@
 
 .thead th, .tbody th, .tbody td {
     padding: 14px 10px 10px
-}
-
-.thead tr th:first-child {
-    width: 120px;
-}
-
-.thead tr th:nth-child(2) {
-    width: 120px;
-}
-
-.thead tr th:nth-child(3) {
-    width: 120px;
-}
-
-.thead tr th:nth-child(4) {
-    width: 145px;
-}
-
-.thead tr th:nth-child(5) {
-    width: 145px;
-}
-
-.thead tr th:nth-child(6) {
-    width: 210px;
-}
-
-.thead tr th:nth-child(7) {
-    width: 85px;
 }
 
 .modal-dialog {
@@ -90,10 +54,6 @@
 }
 
 @media screen and (max-width: 1229px) {
-    .sidebar {
-        max-width: 195px;
-    }
-
     .main-sidebar {
         padding-right: 0 !important;
         padding-left: 0 !important;
@@ -140,12 +100,6 @@
         justify-self: start;
     }
 
-    .main-info-action-dates {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     .table {
         max-width: 945px;
     }
@@ -160,14 +114,6 @@
     .main-info-action .navbar .btn {
         font-size: 14px;
         max-width: 150px;
-    }
-
-    .main-info-action-dates > * {
-        font-size: 14px !important;
-    }
-
-    .btn-link {
-        padding: 8px !important;
     }
 
     .main-info-table {
@@ -213,14 +159,6 @@
 
     .btn-outline-secondary {
         font-size: 12px !important;
-    }
-
-    .main-info-action-dates > * {
-        font-size: 12px !important;
-    }
-
-    .btn-link {
-        padding: 5px !important;
     }
 
     .main-info-table {
@@ -275,10 +213,6 @@
         font-size: 10px !important;
         width: 90px;
         justify-self: center;
-    }
-
-    .main-info-action-dates > * {
-        font-size: 10px !important;
     }
 
     .btn-delete img {

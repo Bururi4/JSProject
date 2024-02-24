@@ -5,14 +5,6 @@
     height: 37px;
 }
 
-.main-info-action-dates {
-    font-family: RobotoMedium, sans-serif;
-}
-
-.main-info-action-dates span {
-    color: black;
-}
-
 .main-info-diagrams {
     margin-top: 95px;
 }
@@ -85,13 +77,8 @@
         height: unset;
     }
 
-    .main-info-action-dates {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-
     .main-info-diagrams {
+        align-items: center;
         flex-direction: column !important;
         margin-top: 60px;
         margin-left: 0 !important;
@@ -118,10 +105,6 @@
 
     .main-info-action .navbar .btn {
         font-size: 14px;
-    }
-
-    .main-info-action-dates > * {
-        font-size: 14px !important;
     }
 
     .main-info-diagrams {
@@ -171,10 +154,6 @@
         max-width: 415px !important;
     }
 
-    .main-info-action-dates {
-        margin-right: 5px;
-    }
-
     .btn-link {
         padding: 5px !important;
     }
@@ -199,10 +178,6 @@
         font-size: 12px;
         width: 95px;
         justify-self: center;
-    }
-
-    .main-info-action-dates > * {
-        font-size: 12px !important;
     }
 
     .diagram-title {
