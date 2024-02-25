@@ -192,7 +192,7 @@ export class EditOperation {
         setTimeout(async () => {
             if (selectType && categorySelect.value && sumInput.value && dateInput.value && commentInput.value) {
                 try {
-                    const result = await CustomHttp.request(config.host + '/' + this.urlRoute.split('/')[1] + this.id, 'PUT', {
+                    const result = await CustomHttp.request(config.host + '/' + this.urlRoute.split('/')[1] + '/' + this.id, 'PUT', {
                         type: selectType,
                         amount: sumInput.value,
                         date: correctDate,

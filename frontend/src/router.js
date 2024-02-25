@@ -3,7 +3,8 @@ import {Auth} from "../services/auth.js";
 import {PieChart} from "./components/main.js";
 import {Sidebar} from "./components/sidebar.js";
 import {Balance} from "./components/balance.js";
-import {Operations} from "./components/operations";
+import {Operations} from "./components/operations.js";
+import {Category} from "./components/category.js";
 
 export class Router {
     constructor() {
@@ -44,30 +45,30 @@ export class Router {
                 }
             },
             {
-                route: '#/income',
-                title: 'Доходы',
-                template: 'templates/gain.html',
-                styles: 'styles/gain.css',
-                load: () => {
-
-                }
-            },
-            {
-                route: '#/expense',
-                title: 'Расходы',
-                template: 'templates/cost.html',
-                styles: 'styles/cost.css',
-                load: () => {
-
-                }
-            },
-            {
                 route: '#/operations',
                 title: 'Доходы и расходы',
                 template: 'templates/income-expenses.html',
                 styles: 'styles/income-expenses.css',
                 load: () => {
                     new Operations();
+                }
+            },
+            {
+                route: '#/income',
+                title: 'Доходы',
+                template: 'templates/income.html',
+                styles: 'styles/income.css',
+                load: () => {
+                    new Category();
+                }
+            },
+            {
+                route: '#/expense',
+                title: 'Расходы',
+                template: 'templates/expense.html',
+                styles: 'styles/expense.css',
+                load: () => {
+                    new Category();
                 }
             }
         ];
