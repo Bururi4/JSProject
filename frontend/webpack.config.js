@@ -6,7 +6,7 @@ module.exports = {
     entry: './src/app.js',
     mode: "development",
     output: {
-        filename: 'main.js',
+        filename: 'pie.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },

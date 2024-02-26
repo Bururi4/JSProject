@@ -40,6 +40,10 @@
     font-size: 14px;
 }
 
+#create-card a {
+    padding: 52px 20px !important;
+}
+
 @media screen and (max-width: 1440px) {
     .main-info-title {
         font-size: 36px !important;
@@ -52,10 +56,18 @@
     .card-title {
         font-size: 24px;
     }
+
+    #create-card a {
+        padding: 50px 20px !important;
+    }
 }
 
 /* 768 - 1023 */
 @media screen and (max-width: 1023px) {
+    .main-info-title {
+        font-size: 30px !important;
+    }
+
     .main-info {
         margin-left: 20px !important;
     }
@@ -85,6 +97,12 @@
 
     .modal-text {
         font-size: 16px !important;
+    }
+}
+
+@media screen and (max-width: 1008px) {
+    #create-card a {
+        padding: 48px 20px !important;
     }
 }
 
@@ -131,9 +149,9 @@
 /* 320 - 374 */
 @media screen and (max-width: 374px) {
     .modal-content {
-        padding: 15px 0;
-        max-width: 260px;
+        padding: 20px 0;
+        max-width: 285px;
         top: calc(50% - 63px);
-        left: calc(50% - 130px);
+        left: calc(50% - 142px);
     }
 }

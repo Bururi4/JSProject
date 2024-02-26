@@ -1,6 +1,6 @@
 import {Form} from "./components/form.js";
 import {Auth} from "../services/auth.js";
-import {PieChart} from "./components/main.js";
+import {Main} from "./components/main.js";
 import {Sidebar} from "./components/sidebar.js";
 import {Balance} from "./components/balance.js";
 import {Operations} from "./components/operations.js";
@@ -23,7 +23,7 @@ export class Router {
                 template: 'templates/main.html',
                 styles: 'styles/main.css',
                 load: () => {
-                    new PieChart();
+                    new Main();
                 }
             },
             {
@@ -57,7 +57,7 @@ export class Router {
                 route: '#/income',
                 title: 'Доходы',
                 template: 'templates/income.html',
-                styles: 'styles/income.css',
+                styles: 'styles/category.css',
                 load: () => {
                     new Category();
                 }
@@ -66,7 +66,7 @@ export class Router {
                 route: '#/expense',
                 title: 'Расходы',
                 template: 'templates/expense.html',
-                styles: 'styles/expense.css',
+                styles: 'styles/category.css',
                 load: () => {
                     new Category();
                 }

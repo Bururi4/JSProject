@@ -1,4 +1,4 @@
-import config from "../../config/config.js";
+import  config from "../../config/config.js";
 import {CustomHttp} from "../../services/custom-http.js";
 import {CreateCategory} from "./create-category.js";
 import {EditCategory} from "./edit-category.js";
@@ -88,7 +88,7 @@ export class Category {
         categoryCards.appendChild(createCard);
 
         const createCardLink = document.createElement('a');
-        createCardLink.className = 'card-body py-5 d-flex justify-content-center m-1';
+        createCardLink.className = 'card-body d-flex justify-content-center';
         createCard.appendChild(createCardLink);
 
         createCardLink.addEventListener('click', () => {
