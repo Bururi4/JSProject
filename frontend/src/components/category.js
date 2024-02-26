@@ -2,6 +2,7 @@ import config from "../../config/config.js";
 import {CustomHttp} from "../../services/custom-http.js";
 import {CreateCategory} from "./create-category.js";
 import {EditCategory} from "./edit-category.js";
+import {Modal} from "./modal.js";
 
 export class Category {
     urlRoute = window.location.hash.split('?')[0];
@@ -20,7 +21,7 @@ export class Category {
                     throw new Error(result.message);
                 } else {
                     this.categories = result;
-                    await this.showCategories();
+                    this.showCategories();
                     return result;
                 }
             } else {
@@ -74,15 +75,9 @@ export class Category {
             const cardDeleteButton = document.createElement('button');
             cardDeleteButton.className = 'button delete-button btn btn-danger px-3 py-2';
             cardDeleteButton.innerText = 'Удалить';
-            // cardDeleteButton.onclick = async () => {
-            //     const url = this.urlRoute.split('/')[1];
-            //     if (url === 'income') {
-            //         new Popup('Вы действительно хотите удалить категорию?', this.urlRoute, category.id);
-            //     }
-            //     if (url === 'expense') {
-            //         new Popup('Вы действительно хотите удалить категорию?', this.urlRoute, category.id);
-            //     }
-            // }
+            cardDeleteButton.onclick = async () => {
+                new Modal(this.urlRoute, category.id);
+            }
             cardButtons.appendChild(cardDeleteButton);
         })
 

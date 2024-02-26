@@ -3,6 +3,7 @@ import config from "../../config/config.js";
 import AirDatepicker from 'air-datepicker';
 import {CreateOperation} from "./create-operation";
 import {EditOperation} from "./edit-operation";
+import {Modal} from "./modal.js";
 
 export class Operations {
     urlRoute = window.location.hash.split('?')[0];
@@ -263,9 +264,9 @@ export class Operations {
                     deleteLink.className = 'btn p-1 border-0 btn-delete';
                     deleteLink.setAttribute('href', 'javascript:void(0)');
                     deleteLink.insertAdjacentHTML('afterbegin', '<img src="../../images/trash.svg" alt="Удалить операцию">');
-                    // deleteLink.onclick = async () => {
-                    //     new Popup('Удалить выбранную операцию?', this.urlRoute, operation.id);
-                    // }
+                    deleteLink.onclick = async () => {
+                        new Modal(this.urlRoute, operation.id);
+                    }
                     options.appendChild(deleteLink);
                 }
             )
