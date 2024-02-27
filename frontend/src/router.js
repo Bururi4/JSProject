@@ -47,7 +47,7 @@ export class Router {
             {
                 route: '#/operations',
                 title: 'Доходы и расходы',
-                template: 'templates/income-expenses.html',
+                template: 'templates/operations.html',
                 styles: 'styles/income-expenses.css',
                 load: () => {
                     new Operations();

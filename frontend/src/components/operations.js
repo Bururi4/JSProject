@@ -12,25 +12,39 @@ export class Operations {
     operationsData = null;
 
     constructor() {
-        const buttons = document.querySelectorAll('.date-filter');
+        // const buttons = document.querySelectorAll('.date-filter');
+        const buttons = document.getElementById('filterButtons');
         const todayBtn = document.getElementById('todayBtn');
 
-        buttons.forEach(item => {
-            item.classList.remove('active');
-        })
+        const filterChildren = buttons.children;
+        Array.from(filterChildren).forEach(button => button.classList.remove('active'));
+
+        // buttons.forEach(item => {
+        //     item.classList.remove('active');
+        // })
         todayBtn.classList.add('active');
 
         this.getOperationByDate('today');
 
-        let filterButtons = ['today', 'week', 'month', 'year', 'all'];
+        // let filterButtons = ['today', 'week', 'month', 'year', 'all'];
 
-        buttons.forEach((item, i) => {
-            item.onclick = () => {
-                buttons.forEach((i) => i.classList.remove('active'))
-                this.getOperationByDate(filterButtons[i]);
-                item.classList.add('active');
+        buttons.onclick = (event => {
+            const target = event.target;
+            Array.from(filterChildren).forEach(button => button.classList.remove('active'));
+            const attr = target.getAttribute('data-filter');
+            if (attr) {
+                this.getOperationByDate(attr);
+                target.classList.add('active');
             }
         })
+
+        // buttons.forEach((item, i) => {
+        //     item.onclick = () => {
+        //         buttons.forEach((i) => i.classList.remove('active'))
+        //         this.getOperationByDate(filterButtons[i]);
+        //         item.classList.add('active');
+        //     }
+        // })
 
         const intervalBtn = document.getElementById('interval-btn');
         const dateFromLabel = document.getElementById('date-from-label');

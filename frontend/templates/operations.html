@@ -12,13 +12,13 @@
     </div>
     <div class="main-info-action d-flex align-items-center mt-4 mb-4">
         <nav class="navbar p-0">
-            <form class="container-fluid justify-content-start px-0">
-                <button class="btn btn-outline-secondary date-filter" type="button" id="todayBtn">Сегодня</button>
-                <button class="btn btn-outline-secondary date-filter" type="button" id="weekBtn">Неделя</button>
-                <button class="btn btn-outline-secondary date-filter" type="button" id="monthBtn">Месяц</button>
-                <button class="btn btn-outline-secondary date-filter" type="button" id="yearBtn">Год</button>
-                <button class="btn btn-outline-secondary date-filter" type="button" id="allBtn">Все</button>
-                <button class="btn btn-outline-secondary date-filter" type="button" id="interval-btn" disabled>
+            <form class="container-fluid justify-content-start px-0" id="filterButtons">
+                <button class="btn btn-outline-secondary date-filter" type="button" data-filter="today" id="todayBtn">Сегодня</button>
+                <button class="btn btn-outline-secondary date-filter" type="button" data-filter="week" id="weekBtn">Неделя</button>
+                <button class="btn btn-outline-secondary date-filter" type="button" data-filter="month" id="monthBtn">Месяц</button>
+                <button class="btn btn-outline-secondary date-filter" type="button" data-filter="year" id="yearBtn">Год</button>
+                <button class="btn btn-outline-secondary date-filter" type="button" data-filter="all" id="allBtn">Все</button>
+                <button class="btn btn-outline-secondary date-filter" type="button" data-filter="invterval" id="interval-btn" disabled>
                     Интервал
                 </button>
             </form>
