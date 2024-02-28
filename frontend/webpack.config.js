@@ -6,7 +6,7 @@ module.exports = {
     entry: './src/app.js',
     mode: "development",
     output: {
-        filename: 'main.js',
+        filename: 'pie.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
@@ -28,20 +28,18 @@ module.exports = {
             ],
         }),
     ],
-    // module: {
-    //     rules: [
-    //         {
-    //             test: /\.js$/,
-    //             exclude: /node_modules/,
-    //             use: {
-    //                 loader: 'babel-loader',
-    //                 options: {
-    //                     presets: [
-    //                         ['@babel/preset-env', { targets: "defaults" }]
-    //                     ]
-    //                 }
-    //             }
-    //         },
-    //     ]
-    // }
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
+                use: {
+                    loader: 'url-loader',
+                }
+            }
+        ],
+    },
 };

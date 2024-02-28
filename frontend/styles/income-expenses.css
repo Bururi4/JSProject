@@ -5,14 +5,6 @@
     height: 37px;
 }
 
-.main-info-action-dates {
-    font-family: RobotoMedium, sans-serif;
-}
-
-.main-info-action-dates span {
-    color: black;
-}
-
 .action-button {
     font-size: 14px;
 }
@@ -31,34 +23,6 @@
 
 .thead th, .tbody th, .tbody td {
     padding: 14px 10px 10px
-}
-
-.thead tr th:first-child {
-    width: 120px;
-}
-
-.thead tr th:nth-child(2) {
-    width: 120px;
-}
-
-.thead tr th:nth-child(3) {
-    width: 120px;
-}
-
-.thead tr th:nth-child(4) {
-    width: 145px;
-}
-
-.thead tr th:nth-child(5) {
-    width: 145px;
-}
-
-.thead tr th:nth-child(6) {
-    width: 210px;
-}
-
-.thead tr th:nth-child(7) {
-    width: 85px;
 }
 
 .modal-dialog {
@@ -90,10 +54,6 @@
 }
 
 @media screen and (max-width: 1229px) {
-    .sidebar {
-        max-width: 195px;
-    }
-
     .main-sidebar {
         padding-right: 0 !important;
         padding-left: 0 !important;
@@ -140,12 +100,6 @@
         justify-self: start;
     }
 
-    .main-info-action-dates {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     .table {
         max-width: 945px;
     }
@@ -162,31 +116,12 @@
         max-width: 150px;
     }
 
-    .main-info-action-dates > * {
-        font-size: 14px !important;
-    }
-
-    .btn-link {
-        padding: 8px !important;
-    }
-
     .main-info-table {
         margin-right: 10px;
     }
 
     th, td {
         font-size: 12px;
-    }
-
-    .modal-content {
-        padding: 25px 0;
-        max-width: 430px;
-        top: calc(50% - 65px);
-        left: calc(50% - 215px);
-    }
-
-    .modal-text {
-        font-size: 16px !important;
     }
 }
 
@@ -215,14 +150,6 @@
         font-size: 12px !important;
     }
 
-    .main-info-action-dates > * {
-        font-size: 12px !important;
-    }
-
-    .btn-link {
-        padding: 5px !important;
-    }
-
     .main-info-table {
         margin-right: 0;
         margin-left: 5px;
@@ -245,18 +172,15 @@
         padding: 0 0 6px 2px !important;
     }
 
-    .modal-content {
-        max-width: 330px;
-        top: calc(50% - 62px);
-        left: calc(50% - 165px);
-    }
-
-    .modal-text {
-        font-size: 14px !important;
-    }
-
     .button-delete {
         font-size: 12px
+    }
+
+    .main-info-inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
     }
 }
 
@@ -277,10 +201,6 @@
         justify-self: center;
     }
 
-    .main-info-action-dates > * {
-        font-size: 10px !important;
-    }
-
     .btn-delete img {
         width: 12px;
         height: 13px;
@@ -291,8 +211,12 @@
         height: 13px;
     }
 
-    .modal-content {
-        padding: 15px 0;
+    .main-info-inputs {
+        padding: 0 10px !important;
+    }
+
+    .form-control {
+        font-size: 14px !important;
     }
 }
 
@@ -304,12 +228,5 @@
 
     th, td {
         font-size: 8px;
-    }
-
-    .modal-content {
-        padding: 15px 0;
-        max-width: 260px;
-        top: calc(50% - 63px);
-        left: calc(50% - 130px);
     }
 }

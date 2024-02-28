@@ -5,14 +5,6 @@
     height: 37px;
 }
 
-.main-info-action-dates {
-    font-family: RobotoMedium, sans-serif;
-}
-
-.main-info-action-dates span {
-    color: black;
-}
-
 .main-info-diagrams {
     margin-top: 95px;
 }
@@ -34,23 +26,6 @@
     font-size: 12px;
     font-family: RobotoMedium, sans-serif;
     color: #000000;
-}
-
-.rectangle {
-    width: 35px;
-    height: 10px;
-}
-
-.orange {
-    background: #fd7e14;
-}
-
-.yellow {
-    background: #ffc107;
-}
-
-.green {
-    background: #1acc7a;
 }
 
 .border-divider {
@@ -85,14 +60,9 @@
         height: unset;
     }
 
-    .main-info-action-dates {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-
     .main-info-diagrams {
-        flex-direction: column !important;
+        /*align-items: center;*/
+        flex-direction: column;
         margin-top: 60px;
         margin-left: 0 !important;
     }
@@ -118,10 +88,6 @@
 
     .main-info-action .navbar .btn {
         font-size: 14px;
-    }
-
-    .main-info-action-dates > * {
-        font-size: 14px !important;
     }
 
     .main-info-diagrams {
@@ -171,16 +137,18 @@
         max-width: 415px !important;
     }
 
-    .main-info-action-dates {
-        margin-right: 5px;
-    }
-
     .btn-link {
         padding: 5px !important;
     }
 
     .border-divider {
         display: none !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .main-info-diagrams {
+        align-items: center;
     }
 }
 
@@ -201,10 +169,6 @@
         justify-self: center;
     }
 
-    .main-info-action-dates > * {
-        font-size: 12px !important;
-    }
-
     .diagram-title {
         font-size: 18px !important;
     }
@@ -215,10 +179,6 @@
 
     .pie-diagram {
         margin-right: 7px !important;
-    }
-
-    .rectangle {
-        width: 30px;
     }
 }
 

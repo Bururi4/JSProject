@@ -5,39 +5,36 @@
     <div class="main-info-action d-flex align-items-center">
         <nav class="navbar p-0">
             <form class="container-fluid justify-content-start px-0">
-                <button class="btn btn-outline-secondary active" type="button">Сегодня</button>
-                <button class="btn btn-outline-secondary" type="button">Неделя</button>
-                <button class="btn btn-outline-secondary" type="button">Месяц</button>
-                <button class="btn btn-outline-secondary" type="button">Год</button>
-                <button class="btn btn-outline-secondary" type="button">Все</button>
-                <button class="btn btn-outline-secondary" type="button">Интервал</button>
+                <button class="btn btn-outline-secondary date-filter" type="button" id="todayBtn">Сегодня</button>
+                <button class="btn btn-outline-secondary date-filter" type="button" id="weekBtn">Неделя</button>
+                <button class="btn btn-outline-secondary date-filter" type="button" id="monthBtn">Месяц</button>
+                <button class="btn btn-outline-secondary date-filter" type="button" id="yearBtn">Год</button>
+                <button class="btn btn-outline-secondary date-filter" type="button" id="allBtn">Все</button>
+                <button class="btn btn-outline-secondary date-filter" type="button" id="interval-btn" disabled>
+                    Интервал
+                </button>
             </form>
         </nav>
-        <div class="main-info-action-dates">
+        <div class="main-info-action-dates d-flex align-items-center justify-content-center">
             <span>с</span>
-            <button type="button" class="btn btn-link text-secondary">Дата</button>
+            <div class="d-flex flex-column">
+                <label class="btn btn-link text-secondary text-date" for="date-from" id="date-from-label">Дата</label>
+                <input type="text" id="date-from" class="main-info-action-dates-input">
+            </div>
             <span>по</span>
-            <button type="button" class="btn btn-link text-secondary">Дата</button>
+            <div class="d-flex flex-column">
+                <label class="btn btn-link text-secondary text-date" for="date-to" id="date-to-label">Дата</label>
+                <input type="text" id="date-to" class="main-info-action-dates-input">
+            </div>
         </div>
     </div>
-    <div class="main-info-diagrams d-flex ms-4">
+    <div class="main-info-diagrams d-flex ms-4 align-items-sm-center">
         <div class="wrapper-diagram-gain mb-3">
             <div class="diagram-gain text-center d-flex flex-column mb-3">
                 <div class="diagram-title fs-3 mb-3">
                     Доходы
                 </div>
-                <div class="diagram-colors d-flex align-items-center justify-content-between mb-4">
-                    <div class="rectangle bg-danger"></div>
-                    <span>Red</span>
-                    <div class="rectangle orange"></div>
-                    <span>Orange</span>
-                    <div class="rectangle yellow"></div>
-                    <span>Yellow</span>
-                    <div class="rectangle green"></div>
-                    <span>Green</span>
-                    <div class="rectangle bg-primary"></div>
-                    <span>Blue</span>
-                </div>
+                <div id="categories-income">Нет данных по категориям</div>
                 <div class="chart-wrapper">
                     <canvas id="first-pie" class="pie-diagram"></canvas>
                 </div>
@@ -49,18 +46,7 @@
                 <div class="diagram-title fs-3 mb-3">
                     Расходы
                 </div>
-                <div class="diagram-colors d-flex align-items-center justify-content-between mb-4">
-                    <div class="rectangle bg-danger"></div>
-                    <span>Red</span>
-                    <div class="rectangle orange"></div>
-                    <span>Orange</span>
-                    <div class="rectangle yellow"></div>
-                    <span>Yellow</span>
-                    <div class="rectangle green"></div>
-                    <span>Green</span>
-                    <div class="rectangle bg-primary"></div>
-                    <span>Blue</span>
-                </div>
+                <div id="categories-expense">Нет данных по категориям</div>
                 <div class="chart-wrapper">
                     <canvas id="second-pie" class="pie-diagram"></canvas>
                 </div>

@@ -1,17 +1,22 @@
 import {Form} from "./components/form.js";
 import {Auth} from "../services/auth.js";
-import {PieChart} from "./components/main.js";
+import {Main} from "./components/main.js";
 import {Sidebar} from "./components/sidebar.js";
+import {Balance} from "./components/balance.js";
+import {Operations} from "./components/operations.js";
+import {Category} from "./components/category.js";
 
 export class Router {
     constructor() {
         this.registrationElement = document.getElementById('registration');
         this.mainElement = document.getElementById('main');
         this.contentElement = document.getElementById('content');
-        this.stylesElement = document.getElementById('styles');
         this.titleElement = document.getElementById('page-title');
         this.profilefullNameElement = document.getElementById('profile-full-name');
         this.sidebar = null;
+        this.headElement = document.getElementsByTagName('head')[0];
+        this.stylesElement = document.createElement('link');
+        this.stylesElement.setAttribute('rel', 'stylesheet');
 
         this.routes = [
             {
@@ -20,7 +25,7 @@ export class Router {
                 template: 'templates/main.html',
                 styles: 'styles/main.css',
                 load: () => {
-                    new PieChart()
+                    new Main();
                 }
             },
             {
@@ -42,86 +47,32 @@ export class Router {
                 }
             },
             {
+                route: '#/operations',
+                title: 'Доходы и расходы',
+                template: 'templates/operations.html',
+                styles: 'styles/income-expenses.css',
+                load: () => {
+                    new Operations();
+                }
+            },
+            {
                 route: '#/income',
                 title: 'Доходы',
-                template: 'templates/gain.html',
-                styles: 'styles/gain.css',
+                template: 'templates/income.html',
+                styles: 'styles/category.css',
                 load: () => {
-
+                    new Category();
                 }
             },
             {
                 route: '#/expense',
                 title: 'Расходы',
-                template: 'templates/cost.html',
-                styles: 'styles/cost.css',
+                template: 'templates/expense.html',
+                styles: 'styles/category.css',
                 load: () => {
-
+                    new Category();
                 }
-            },
-            {
-                route: '#/operations',
-                title: 'Доходы и расходы',
-                template: 'templates/income-expenses.html',
-                styles: 'styles/income-expenses.css',
-                load: () => {
-
-                }
-            },
-            {
-                route: '#/operations-edit',
-                title: 'Редактировать доход/расход',
-                template: 'templates/edit-income-expenses.html',
-                styles: 'styles/create-income-expenses.css',
-                load: () => {
-
-                }
-            },
-            {
-                route: '#/operations-create',
-                title: 'Редактировать доход/расход',
-                template: 'templates/create-income-expenses.html',
-                styles: 'styles/create-income-expenses.css',
-                load: () => {
-
-                }
-            },
-            {
-                route: '#/create-income',
-                title: 'Создание категории доходов',
-                template: 'templates/create-gain-category.html',
-                styles: 'styles/create-category.css',
-                load: () => {
-
-                }
-            },
-            {
-                route: '#/create-expense',
-                title: 'Создание категории расходов',
-                template: 'templates/create-cost-category.html',
-                styles: 'styles/create-category.css',
-                load: () => {
-
-                }
-            },
-            {
-                route: '#/edit-income',
-                title: 'Редактирование категории доходов',
-                template: 'templates/edit-gain-category.html',
-                styles: 'styles/edit-category.css',
-                load: () => {
-
-                }
-            },
-            {
-                route: '#/edit-expense',
-                title: 'Редактирование категории расходов',
-                template: 'templates/edit-cost-category.html',
-                styles: 'styles/edit-category.css',
-                load: () => {
-
-                }
-            },
+            }
         ];
     }
 
@@ -145,12 +96,14 @@ export class Router {
         if (urlRoute === '#/login' || urlRoute === '#/signup') {
             this.registrationElement.innerHTML = await fetch(newRoute.template).then(response => response.text());
             this.stylesElement.setAttribute('href', newRoute.styles);
+            this.headElement.appendChild(this.stylesElement);
             this.titleElement.innerText = newRoute.title;
             this.registrationElement.style.display = 'flex';
             this.mainElement.style.display = 'none';
         } else {
             this.contentElement.innerHTML = await fetch(newRoute.template).then(response => response.text());
             this.stylesElement.setAttribute('href', newRoute.styles);
+            this.headElement.appendChild(this.stylesElement);
             this.titleElement.innerText = newRoute.title;
             this.registrationElement.style.display = 'none';
             this.mainElement.style.display = 'flex';
@@ -166,6 +119,7 @@ export class Router {
 
             if (userInfo && accessToken) {
                 this.profilefullNameElement.innerText = userInfo.name + ' ' + userInfo.lastName;
+                new Balance();
             } else {
                 window.location.href = '#/login';
             }
