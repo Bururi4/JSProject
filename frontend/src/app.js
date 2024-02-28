@@ -1,5 +1,7 @@
 import 'bootstrap';
-import 'air-datepicker/air-datepicker.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'air-datepicker/air-datepicker.css';
+import '../styles/common-styles.css';
 import {Router} from "./router.js";
 
 class App {

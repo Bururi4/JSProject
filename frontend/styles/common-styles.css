@@ -1,11 +1,11 @@
 @font-face {
     font-family: Roboto;
-    src: url("../fonts/Roboto-Regular.ttf");
+    src: url("../static/fonts/Roboto-Regular.ttf");
 }
 
 @font-face {
     font-family: RobotoMedium;
-    src: url("../fonts/Roboto-Medium.ttf");
+    src: url("../static/fonts/Roboto-Medium.ttf");
 }
 
 body,
@@ -141,7 +141,7 @@ svg path {
     min-height: 161px;
 }
 
-.popup-title {
+.modal-title {
     color: #290661;
     text-align: center;
     font-family: RobotoMedium, sans-serif;
@@ -159,13 +159,13 @@ svg path {
     font-size: 15px;
 }
 
-.popup-buttons {
+.modal-buttons {
     display: flex;
     box-sizing: border-box;
     margin-top: 10px;
 }
 
-.popup-buttons .btn {
+.modal-buttons .btn {
     font-family: RobotoMedium, sans-serif;
     font-size: 14px;
 }

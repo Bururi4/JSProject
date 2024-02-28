@@ -11,10 +11,12 @@ export class Router {
         this.registrationElement = document.getElementById('registration');
         this.mainElement = document.getElementById('main');
         this.contentElement = document.getElementById('content');
-        this.stylesElement = document.getElementById('styles');
         this.titleElement = document.getElementById('page-title');
         this.profilefullNameElement = document.getElementById('profile-full-name');
         this.sidebar = null;
+        this.headElement = document.getElementsByTagName('head')[0];
+        this.stylesElement = document.createElement('link');
+        this.stylesElement.setAttribute('rel', 'stylesheet');
 
         this.routes = [
             {
@@ -94,12 +96,14 @@ export class Router {
         if (urlRoute === '#/login' || urlRoute === '#/signup') {
             this.registrationElement.innerHTML = await fetch(newRoute.template).then(response => response.text());
             this.stylesElement.setAttribute('href', newRoute.styles);
+            this.headElement.appendChild(this.stylesElement);
             this.titleElement.innerText = newRoute.title;
             this.registrationElement.style.display = 'flex';
             this.mainElement.style.display = 'none';
         } else {
             this.contentElement.innerHTML = await fetch(newRoute.template).then(response => response.text());
             this.stylesElement.setAttribute('href', newRoute.styles);
+            this.headElement.appendChild(this.stylesElement);
             this.titleElement.innerText = newRoute.title;
             this.registrationElement.style.display = 'none';
             this.mainElement.style.display = 'flex';

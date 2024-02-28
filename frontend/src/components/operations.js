@@ -3,7 +3,7 @@ import config from "../../config/config.js";
 import AirDatepicker from 'air-datepicker';
 import {CreateOperation} from "./create-operation";
 import {EditOperation} from "./edit-operation";
-import {Modal} from "./modal.js";
+import {MyModal} from "./modal.js";
 
 export class Operations {
     urlRoute = window.location.hash.split('?')[0];
@@ -93,9 +93,10 @@ export class Operations {
                 let dateToData = dateTo.split('.');
                 let dateToFormatted = dateToData[2] + '-' + dateToData[1] + '-' + dateToData[0];
 
-                buttons.forEach((item) => {
-                    item.classList.remove('active');
-                })
+                Array.from(filterChildren).forEach(button => button.classList.remove('active'));
+                // buttons.forEach((item) => {
+                //     item.classList.remove('active');
+                // })
 
                 this.getOperationByDate('interval', dateFromFormatted, dateToFormatted);
                 intervalBtn.classList.add('active');
@@ -279,7 +280,7 @@ export class Operations {
                     deleteLink.setAttribute('href', 'javascript:void(0)');
                     deleteLink.insertAdjacentHTML('afterbegin', '<img src="../../images/trash.svg" alt="Удалить операцию">');
                     deleteLink.onclick = async () => {
-                        new Modal(this.urlRoute, operation.id);
+                        new MyModal(this.urlRoute, operation.id);
                     }
                     options.appendChild(deleteLink);
                 }

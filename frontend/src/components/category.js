@@ -2,7 +2,7 @@ import  config from "../../config/config.js";
 import {CustomHttp} from "../../services/custom-http.js";
 import {CreateCategory} from "./create-category.js";
 import {EditCategory} from "./edit-category.js";
-import {Modal} from "./modal.js";
+import {MyModal} from "./modal.js";
 
 export class Category {
     urlRoute = window.location.hash.split('?')[0];
@@ -76,7 +76,7 @@ export class Category {
             cardDeleteButton.className = 'button delete-button btn btn-danger px-3 py-2';
             cardDeleteButton.innerText = 'Удалить';
             cardDeleteButton.onclick = async () => {
-                new Modal(this.urlRoute, category.id);
+                new MyModal(this.urlRoute, category.id);
             }
             cardButtons.appendChild(cardDeleteButton);
         })

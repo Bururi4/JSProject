@@ -61,8 +61,8 @@
     }
 
     .main-info-diagrams {
-        align-items: center;
-        flex-direction: column !important;
+        /*align-items: center;*/
+        flex-direction: column;
         margin-top: 60px;
         margin-left: 0 !important;
     }
@@ -143,6 +143,12 @@
 
     .border-divider {
         display: none !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .main-info-diagrams {
+        align-items: center;
     }
 }
 
